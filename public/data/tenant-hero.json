@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "id": "cp-tenant-hero-narrative-v1",
+  "designSystem": "cp-design-v2-draft",
+  "surface": "tenant-homepage-hero",
+  "audience": "tenant",
+  "status": "approved-for-private-demo",
+  "mission": {
+    "companyContext": "Make renting seamless through payments for both operators and tenants.",
+    "tenantExpression": "Make renting trusted, flexible and affordable for tenants.",
+    "fixedLine": "RENTING."
+  },
+  "values": [
+    {
+      "id": "trusted",
+      "label": "TRUSTED",
+      "status": "active",
+      "order": 1,
+      "meaning": "Clear amounts, due dates, payment status, rental context and support paths.",
+      "claimGuardrail": "A brand principle, not a claim that CasaPay is trusted by a stated customer count or third party."
+    },
+    {
+      "id": "flexible",
+      "label": "FLEXIBLE",
+      "status": "active",
+      "order": 2,
+      "meaning": "Tenant payment and no-deposit options where supported, available and eligible.",
+      "claimGuardrail": "Do not imply universal payment timing, payment-method or no-deposit choice."
+    },
+    {
+      "id": "affordable",
+      "label": "AFFORDABLE",
+      "status": "active",
+      "order": 3,
+      "meaning": "Lower upfront move-in friction and transparent costs where CasaPay options apply.",
+      "claimGuardrail": "Does not mean CasaPay lowers contractual rent. Public use needs product evidence and legal review."
+    },
+    {
+      "id": "no-deposit",
+      "label": "NO-DEPOSIT",
+      "status": "active",
+      "order": 4,
+      "meaning": "A deposit-free move-in option where the CasaPay product is supported and the tenant is eligible.",
+      "claimGuardrail": "Do not imply universal availability, automatic eligibility, insurance or a guaranteed deposit-free tenancy."
+    }
+  ],
+  "rotation": {
+    "displayMs": 3200,
+    "transitionMs": 260,
+    "sequence": "ascending-order-loop",
+    "topLinePunctuation": "none",
+    "fixedLinePunctuation": "period",
+    "reducedMotion": "show-first-active-value-only"
+  },
+  "accessibility": {
+    "headingLabel": "Trusted, flexible, affordable and no-deposit renting.",
+    "announceRotation": false,
+    "visibleWordsAriaHidden": true
+  },
+  "extensionPolicy": {
+    "maximumActiveValuesWithoutReapproval": 5,
+    "requirements": [
+      "Represents a distinct tenant problem or outcome.",
+      "Maps to a real or explicitly future-labelled CasaPay experience.",
+      "Can be substantiated and explained in supporting copy.",
+      "Passes product and legal review when it implies eligibility, cost, protection, credit, insurance or availability.",
+      "Fits the hero at 320px without clipping or horizontal overflow."
+    ],
+    "candidateExamples": [
+      "SEAMLESS",
+      "ONLINE",
+      "CLEAR",
+      "CONNECTED",
+      "REUSABLE",
+      "REWARDED",
+      "FAIRER"
+    ]
+  },
+  "authority": {
+    "visualContract": "../DESIGN.md",
+    "detailedContract": "../docs/design/tenant-hero-narrative.md",
+    "designIndex": "../docs/design/README.md",
+    "runtime": "../offline-consumer.js",
+    "styles": "../server.py",
+    "test": "../tenant-hero-smoke.js"
+  }
+}
