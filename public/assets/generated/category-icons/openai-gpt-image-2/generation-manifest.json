@@ -1,0 +1,346 @@
+{
+  "schema": "category-icon-generation-v1",
+  "created_at": "2026-08-29T15:28:56.515025+00:00",
+  "provider": "openai-codex",
+  "model": "gpt-image-2-high",
+  "api_model": "gpt-image-2",
+  "quality": "high",
+  "aspect_ratio": "square",
+  "reference_images": [
+    "_local_assets/imageproxy.wolt.com/7cb8d1ec9c99faf507-pasta-dish-light.png",
+    "_local_assets/imageproxy.wolt.com/d625813802fe28762b-fruits-and-vegetables-light.png",
+    "_local_assets/imageproxy.wolt.com/a4b242f98f83150cd7-grocery-basket-wolt-light.png",
+    "_local_assets/imageproxy.wolt.com/a079ee6ae1db4c0794-health-and-wellbeing-light.png",
+    "_local_assets/imageproxy.wolt.com/a206a73f9b2667310a-lotion-light.png",
+    "_local_assets/imageproxy.wolt.com/9c3572a1995b5b49b2-pet-bowl-light.png"
+  ],
+  "style_prompt": "Use all supplied images only as a strict visual-style reference set. Create\none new standalone category illustration belonging to exactly the same family.\nOutput a square PNG with a genuinely transparent background: no rounded square\ntile, no room, no scene, no horizon, and no full-canvas color field. Render a\nfriendly premium soft-3D object with rounded clay/plastic materials, smooth\nbeveled edges, restrained detail, and clean silhouette readability at 80 px.\nUse a slightly elevated three-quarter camera view, an upper-left soft key light,\nsubtle lower-right contact shadow and a faint category-colored ground glow.\nCenter the complete subject at 65-72% of canvas width/height, leaving 14-18%\nsafe area on every edge. Nothing may touch or leave the canvas. Match the\nreference set's saturated-but-soft cyan, blue, coral, orange, yellow and violet\naccents. No words, letters, numbers, logo, watermark, brand mark, UI, border,\noutline drawing, photorealism, people, hands, or duplicate stray objects.",
+  "categories": {
+    "sports": {
+      "success": true,
+      "elapsed_seconds": 40.65,
+      "prompt": "Create the Sports category icon: one orange basketball leaning naturally\nagainst one compact turquoise-blue dumbbell. The basketball is the primary\nobject; the dumbbell is a smaller supporting cue. Keep both fully visible,\nphysically coherent, uncluttered, and balanced as one compact composition.",
+      "original": "assets/generated/category-icons/openai-gpt-image-2/originals/sports-gpt-image-2-high.png",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "input_image_count": 6,
+      "normalized": {
+        "master": "assets/generated/category-icons/openai-gpt-image-2/normalized/1024/sports.png",
+        "web_400": "assets/generated/category-icons/openai-gpt-image-2/normalized/400/sports.png",
+        "web_200": "assets/generated/category-icons/openai-gpt-image-2/normalized/200/sports.png",
+        "qa": {
+          "alpha_method": "global-light-neutral-checker-key",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "source_bbox": [
+            176,
+            285,
+            1012,
+            904
+          ],
+          "normalized_bbox": [
+            145,
+            239,
+            880,
+            807
+          ],
+          "margins_px": [
+            145,
+            239,
+            144,
+            217
+          ],
+          "max_extent_ratio": 0.7178,
+          "edge_alpha_max": 0,
+          "neutral_checker_residual_pixels": 555,
+          "neutral_checker_residual_ratio": 0.000529,
+          "shadow": {
+            "policy": "compact-achromatic-black-contact-shadow",
+            "rgb": [
+              0,
+              0,
+              0
+            ],
+            "alpha": 34,
+            "ellipse": [
+              170,
+              728,
+              850,
+              790
+            ],
+            "blur_px": 18,
+            "generated_haze_pixels_removed": 14123
+          },
+          "checks": {
+            "transparent_background": true,
+            "no_edge_contact": true,
+            "safe_margin_min_12pct": true,
+            "extent_65_to_74pct": true,
+            "neutral_checker_residual_under_0_5pct": true
+          }
+        }
+      },
+      "evaluation": {
+        "scores_1_to_5": {
+          "family_style_match": 4.5,
+          "thumbnail_silhouette": 5.0,
+          "scale_safe_area": 5.0,
+          "perspective_lighting_shadow": 4.5,
+          "semantic_artifact_correctness": 5.0
+        },
+        "average": 4.8,
+        "verdict": "accept-trial"
+      }
+    },
+    "cars": {
+      "success": true,
+      "elapsed_seconds": 33.26,
+      "prompt": "Create the Cars category icon: one cute unbranded compact city hatchback in a\nfront-left three-quarter view, predominantly Wolt-like turquoise blue with a\nsoft coral accent and neutral dark tires. Keep windows simple, omit license\nplate text, and make the car read instantly at thumbnail size. Exactly one car.",
+      "original": "assets/generated/category-icons/openai-gpt-image-2/originals/cars-gpt-image-2-high.png",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "input_image_count": 6,
+      "normalized": {
+        "master": "assets/generated/category-icons/openai-gpt-image-2/normalized/1024/cars.png",
+        "web_400": "assets/generated/category-icons/openai-gpt-image-2/normalized/400/cars.png",
+        "web_200": "assets/generated/category-icons/openai-gpt-image-2/normalized/200/cars.png",
+        "qa": {
+          "alpha_method": "global-light-neutral-checker-key",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "source_bbox": [
+            210,
+            294,
+            1026,
+            921
+          ],
+          "normalized_bbox": [
+            144,
+            229,
+            880,
+            810
+          ],
+          "margins_px": [
+            144,
+            229,
+            144,
+            214
+          ],
+          "max_extent_ratio": 0.7188,
+          "edge_alpha_max": 0,
+          "neutral_checker_residual_pixels": 589,
+          "neutral_checker_residual_ratio": 0.000562,
+          "shadow": {
+            "policy": "compact-achromatic-black-contact-shadow",
+            "rgb": [
+              0,
+              0,
+              0
+            ],
+            "alpha": 36,
+            "ellipse": [
+              195,
+              730,
+              840,
+              792
+            ],
+            "blur_px": 18,
+            "generated_haze_pixels_removed": 11627
+          },
+          "checks": {
+            "transparent_background": true,
+            "no_edge_contact": true,
+            "safe_margin_min_12pct": true,
+            "extent_65_to_74pct": true,
+            "neutral_checker_residual_under_0_5pct": true
+          }
+        }
+      },
+      "evaluation": {
+        "scores_1_to_5": {
+          "family_style_match": 4.5,
+          "thumbnail_silhouette": 5.0,
+          "scale_safe_area": 5.0,
+          "perspective_lighting_shadow": 4.5,
+          "semantic_artifact_correctness": 5.0
+        },
+        "average": 4.8,
+        "verdict": "accept-trial"
+      }
+    },
+    "bikes": {
+      "success": true,
+      "elapsed_seconds": 32.13,
+      "prompt": "Create the Bikes category icon: one complete unbranded turquoise-blue city\nbicycle in a slightly elevated three-quarter side view, with simple cream tires\nand a coral saddle. Add one small yellow cycling helmet resting beside the rear\nwheel as a secondary cue. Preserve correct bicycle geometry while keeping the\nforms rounded, friendly, simplified, and fully inside the safe area.",
+      "original": "assets/generated/category-icons/openai-gpt-image-2/originals/bikes-gpt-image-2-high.png",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "input_image_count": 6,
+      "normalized": {
+        "master": "assets/generated/category-icons/openai-gpt-image-2/normalized/1024/bikes.png",
+        "web_400": "assets/generated/category-icons/openai-gpt-image-2/normalized/400/bikes.png",
+        "web_200": "assets/generated/category-icons/openai-gpt-image-2/normalized/200/bikes.png",
+        "qa": {
+          "alpha_method": "global-light-neutral-checker-key",
+          "source_size": [
+            1254,
+            1254
+          ],
+          "source_bbox": [
+            184,
+            267,
+            1087,
+            973
+          ],
+          "normalized_bbox": [
+            144,
+            224,
+            880,
+            810
+          ],
+          "margins_px": [
+            144,
+            224,
+            144,
+            214
+          ],
+          "max_extent_ratio": 0.7188,
+          "edge_alpha_max": 0,
+          "neutral_checker_residual_pixels": 2754,
+          "neutral_checker_residual_ratio": 0.002626,
+          "shadow": {
+            "policy": "compact-achromatic-black-contact-shadow",
+            "rgb": [
+              0,
+              0,
+              0
+            ],
+            "alpha": 28,
+            "ellipse": [
+              175,
+              748,
+              860,
+              797
+            ],
+            "blur_px": 16,
+            "generated_haze_pixels_removed": 9604
+          },
+          "checks": {
+            "transparent_background": true,
+            "no_edge_contact": true,
+            "safe_margin_min_12pct": true,
+            "extent_65_to_74pct": true,
+            "neutral_checker_residual_under_0_5pct": true
+          }
+        }
+      },
+      "evaluation": {
+        "scores_1_to_5": {
+          "family_style_match": 4.0,
+          "thumbnail_silhouette": 4.0,
+          "scale_safe_area": 5.0,
+          "perspective_lighting_shadow": 4.0,
+          "semantic_artifact_correctness": 4.5
+        },
+        "average": 4.3,
+        "verdict": "accept-trial-revise-for-production"
+      }
+    }
+  },
+  "contact_sheet": "assets/generated/category-icons/openai-gpt-image-2/openai-trial-contact-sheet.png",
+  "normalization": {
+    "contract": "design/category-icons.json",
+    "master_canvas": [
+      1024,
+      1024
+    ],
+    "web_variants": [
+      [
+        400,
+        400
+      ],
+      [
+        200,
+        200
+      ]
+    ],
+    "target_max_extent_px": 736,
+    "alpha_threshold": 6,
+    "resampling": "Lanczos",
+    "tile_background_policy": "separate UI layer"
+  },
+  "set_evaluation": {
+    "average": 4.63,
+    "verdict": "Option 2 validated for trial assets; Sports and Cars are production candidates after human approval. Simplify Bikes before production integration.",
+    "observations": [
+      "All three generated outputs arrived as opaque 1254x1254 PNGs despite the transparency request.",
+      "GPT Image baked a fake light checkerboard into the pixels; checkerboard-aware global light-neutral keying was required before offline use.",
+      "All normalized outputs pass transparency, no-edge-contact, minimum-safe-margin, and scale checks.",
+      "Bikes contains finer spokes and drivetrain detail than the reference family.",
+      "Regression QA rejects more than 0.5% visible light-neutral checkerboard residual pixels."
+    ]
+  },
+  "human_approval": {
+    "required": true,
+    "status": "pending",
+    "approved_for": [],
+    "approved_by": null,
+    "approved_at": null,
+    "notes": "Trial evidence only. No generated category icon is approved for runtime integration."
+  },
+  "revisions": [
+    {
+      "id": "v2-neutral-shadow",
+      "created_at": "2026-08-29T16:04:03.566374+00:00",
+      "provider": "openai-codex",
+      "model": "gpt-image-2-high",
+      "prompt": "Edit the FIRST supplied image only. Preserve the category objects exactly:\nthe same identity, count, geometry, proportions, camera angle, position,\nmaterials, object colours, highlights, scale, and complete uncropped silhouette.\nDo not redesign or replace the objects.\n\nRemove every coloured floor haze, coloured glow, coloured reflection, and broad\npastel aura beneath or around the objects. Replace it with only one restrained,\ncompact, soft NEUTRAL GREY contact shadow immediately below the physical contact\npoints. The shadow must be achromatic grey/black at low opacity: no cyan, blue,\nteal, yellow, orange, coral, green, purple, or other colour tint. It must not\nspread into a large ellipse or decorative glow.\n\nReturn a standalone square PNG with a genuinely transparent background. Do not\nrender a checkerboard, white field, coloured tile, border, room, floor, scene,\ntext, logo, watermark, or new object. The additional images are style references\nonly; do not copy their objects into the edit.",
+      "categories": {
+        "sports": {
+          "success": true,
+          "elapsed_seconds": 30.67,
+          "source": "assets/generated/category-icons/openai-gpt-image-2/normalized/1024/sports.png",
+          "original": "assets/generated/category-icons/openai-gpt-image-2/originals/v2-neutral-shadow/sports-gpt-image-2-high.png",
+          "source_dimensions": [
+            1254,
+            1254
+          ],
+          "input_image_count": 7
+        },
+        "cars": {
+          "success": true,
+          "elapsed_seconds": 27.75,
+          "source": "assets/generated/category-icons/openai-gpt-image-2/normalized/1024/cars.png",
+          "original": "assets/generated/category-icons/openai-gpt-image-2/originals/v2-neutral-shadow/cars-gpt-image-2-high.png",
+          "source_dimensions": [
+            1254,
+            1254
+          ],
+          "input_image_count": 7
+        },
+        "bikes": {
+          "success": true,
+          "elapsed_seconds": 34.41,
+          "source": "assets/generated/category-icons/openai-gpt-image-2/normalized/1024/bikes.png",
+          "original": "assets/generated/category-icons/openai-gpt-image-2/originals/v2-neutral-shadow/bikes-gpt-image-2-high.png",
+          "source_dimensions": [
+            1254,
+            1254
+          ],
+          "input_image_count": 7
+        }
+      }
+    }
+  ],
+  "active_revision": "v2-neutral-shadow"
+}

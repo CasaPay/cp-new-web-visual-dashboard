@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CasaPay homepage comparison</title>
+    <title>CasaPay prelive comparison</title>
     <style>
       * { box-sizing: border-box; }
       html, body { margin: 0; min-height: 100%; background: #edf1f4; color: #12202b; font-family: Inter, Arial, sans-serif; }
@@ -13,28 +13,45 @@
       .panel { min-width: 0; }
       .label { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; font-size: 13px; font-weight: 700; }
       .label span { color: #63717b; font-weight: 500; }
-      .frame { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid rgba(18,32,43,.16); border-radius: 10px; background: white; box-shadow: 0 8px 24px rgba(18,32,43,.1); }
-      iframe { position: absolute; inset: 0; width: 1280px; height: 720px; border: 0; transform-origin: left top; transform: scale(var(--scale)); }
+      .frame { position: relative; width: 100%; overflow: hidden; border: 1px solid rgba(18,32,43,.16); border-radius: 10px; background: white; box-shadow: 0 8px 24px rgba(18,32,43,.1); }
+      iframe { position: absolute; inset: 0; border: 0; transform-origin: left top; transform: scale(var(--scale)); }
       @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
     </style>
   </head>
   <body>
     <main>
-      <h1>Homepage fidelity check · 1280 × 720</h1>
+      <h1><span id="route-label">Homepage</span> fidelity check · <span id="dimensions">1280 × 720</span></h1>
       <div class="grid">
         <section class="panel">
           <div class="label">Original <span>web-proto-wolt · prelive</span></div>
-          <div class="frame"><iframe title="Original prelive homepage" src="http://127.0.0.1:4174/?comparison"></iframe></div>
+          <div class="frame"><iframe id="reference" title="Original prelive page"></iframe></div>
         </section>
         <section class="panel">
           <div class="label">Next.js <span>codex-cp-web-v2</span></div>
-          <div class="frame"><iframe title="Next.js homepage" src="http://127.0.0.1:3000/?comparison"></iframe></div>
+          <div class="frame"><iframe id="implementation" title="Next.js page"></iframe></div>
         </section>
       </div>
     </main>
     <script>
+      const params = new URLSearchParams(location.search);
+      const requestedPath = params.get('path') || '/';
+      const routePath = requestedPath.startsWith('/') ? requestedPath : '/';
+      const mobile = params.get('mobile') === '1';
+      const sourceWidth = mobile ? 390 : 1280;
+      const sourceHeight = mobile ? 844 : 720;
+      document.querySelector('#route-label').textContent = `${routePath === '/' ? 'Homepage' : routePath}${mobile ? ' · mobile' : ''}`;
+      document.querySelector('#dimensions').textContent = `${sourceWidth} × ${sourceHeight}`;
+      document.querySelector('#reference').src = `http://127.0.0.1:4175${routePath}?comparison`;
+      document.querySelector('#implementation').src = `http://127.0.0.1:3000${routePath}?comparison`;
       const resize = () => {
-        document.documentElement.style.setProperty('--scale', String(document.querySelector('.frame').clientWidth / 1280));
+        document.querySelectorAll('.frame').forEach((frame) => {
+          const scale = mobile ? Math.min(frame.clientWidth / sourceWidth, .88) : frame.clientWidth / sourceWidth;
+          frame.style.setProperty('--scale', String(scale));
+          frame.style.height = `${sourceHeight * scale}px`;
+          const iframe = frame.querySelector('iframe');
+          iframe.style.width = `${sourceWidth}px`;
+          iframe.style.height = `${sourceHeight}px`;
+        });
       };
       addEventListener('resize', resize);
       resize();

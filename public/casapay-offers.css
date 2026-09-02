@@ -1,0 +1,50 @@
+:root{--offers-ink:#143a45;--offers-blue:#007fae;--offers-sky:#e7f7fc;--offers-line:#cddde3;--offers-paper:#f8fbfc;--offers-coral:#ff6a4a}
+.casapay-offers-page{background:#fff;color:var(--offers-ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.casapay-offers-page *{box-sizing:border-box}
+.casapay-offers-hero{display:grid;grid-template-columns:minmax(0,.88fr) minmax(520px,1.12fr);min-height:690px;background:var(--offers-sky);overflow:hidden}
+.casapay-offers-hero__copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(64px,8vw,132px) clamp(28px,7vw,120px)}
+.casapay-offers-breadcrumb{margin-bottom:clamp(48px,7vw,86px);color:#006d99;font-size:14px;font-weight:800;text-decoration:none}
+.casapay-offers-breadcrumb::before{content:"←";margin-inline-end:8px}
+.casapay-offers-eyebrow{display:block;color:#006d99;font-size:12px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}
+.casapay-offers-hero h1{margin:14px 0 20px;font-size:clamp(68px,8vw,126px);line-height:.78;letter-spacing:-.07em;text-transform:uppercase}
+.casapay-offers-hero h1 span{display:block}
+.casapay-offers-hero__copy>p{max-width:570px;margin:0;color:#385964;font-size:clamp(18px,1.6vw,24px);line-height:1.45}
+.casapay-offers-primary-action,.casapay-offers-operator-cta>a{display:inline-flex;align-items:center;justify-content:center;min-height:50px;margin-top:30px;padding:0 24px;border-radius:999px;background:var(--offers-blue);color:#fff;font-weight:800;text-decoration:none}
+.casapay-offers-primary-action:hover,.casapay-offers-operator-cta>a:hover{background:#006d99}
+.casapay-offers-primary-action:focus-visible,.casapay-offers-operator-cta>a:focus-visible,.casapay-offer-card a:focus-visible,.casapay-offers-filter-set button:focus-visible{outline:3px solid #66cbf0;outline-offset:3px}
+.casapay-offers-hero__visual{position:relative;min-height:690px;overflow:hidden}
+.casapay-offers-hero__visual>img{width:100%;height:100%;object-fit:cover;object-position:center}
+.casapay-offers-hero__visual::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,58,69,.03),rgba(20,58,69,.28))}
+.casapay-offers-hero__ticket{position:absolute;z-index:1;right:clamp(22px,5vw,72px);bottom:clamp(22px,5vw,64px);width:min(330px,calc(100% - 44px));padding:26px;border:1px solid rgba(255,255,255,.55);border-radius:26px;background:rgba(253,254,254,.76);-webkit-backdrop-filter:blur(14px) saturate(145%);backdrop-filter:blur(14px) saturate(145%);box-shadow:0 20px 50px rgba(20,58,69,.18)}
+.casapay-offers-hero__ticket span{display:block;margin-bottom:8px;color:#006d99;font-size:12px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
+.casapay-offers-hero__ticket strong{font-size:30px;line-height:1.02;letter-spacing:-.035em}
+.casapay-offers-browse{max-width:1440px;margin:0 auto;padding:clamp(78px,10vw,140px) clamp(22px,5vw,72px)}
+.casapay-offers-section-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.65fr);column-gap:60px;align-items:end}
+.casapay-offers-section-heading .casapay-offers-eyebrow{grid-column:1/-1}
+.casapay-offers-section-heading h2{max-width:850px;margin:16px 0 0;font-size:clamp(46px,6vw,88px);line-height:.9;letter-spacing:-.06em}
+.casapay-offers-section-heading p{margin:0;color:#4b6670;font-size:18px;line-height:1.5}
+.casapay-offers-filters{display:flex;flex-wrap:wrap;gap:18px 28px;margin-top:64px;padding:20px 0;border-top:1px solid var(--offers-line);border-bottom:1px solid var(--offers-line)}
+.casapay-offers-filter-set{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.casapay-offers-filter-set>span{margin-right:6px;font-size:13px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
+.casapay-offers-filter-set button{min-height:42px;padding:0 16px;border:1px solid var(--offers-line);border-radius:999px;background:#fff;color:var(--offers-ink);font:750 14px/1 inherit;cursor:pointer}
+.casapay-offers-filter-set button[aria-pressed="true"]{border-color:var(--offers-blue);background:var(--offers-blue);color:#fff}
+.casapay-offers-count{margin:28px 0 20px;color:#54707a;font-size:14px}.casapay-offers-count strong{color:var(--offers-ink)}
+.casapay-offers-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 22px}
+.casapay-offer-card{min-width:0;overflow:hidden;border:1px solid var(--offers-line);border-radius:28px;background:#fff;box-shadow:0 9px 30px rgba(20,58,69,.07);transition:transform .18s ease,box-shadow .18s ease}
+.casapay-offer-card:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(20,58,69,.13)}
+.casapay-offer-card[hidden]{display:none!important}
+.casapay-offer-card__media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#d9edf3}
+.casapay-offer-card__media>img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}.casapay-offer-card:hover .casapay-offer-card__media>img{transform:scale(1.035)}
+.casapay-offer-card:nth-child(2n) .casapay-offer-card__media>img{object-position:64% center}.casapay-offer-card:nth-child(3n) .casapay-offer-card__media>img{object-position:38% center}
+.casapay-offer-card__media>span{position:absolute;left:14px;top:14px;max-width:calc(100% - 28px);padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.9);color:#075b79;font-size:12px;font-weight:850;box-shadow:0 6px 18px rgba(20,58,69,.12)}
+.casapay-offer-card__body{padding:20px}
+.casapay-offer-card__operator{display:flex;align-items:center;gap:9px;margin-bottom:18px;font-size:13px;font-weight:850}.casapay-offer-card__operator img{width:30px;height:30px;object-fit:contain}
+.casapay-offer-card__body>p{margin:0 0 7px;color:#5b747d;font-size:13px;font-weight:700}.casapay-offer-card h3{margin:0;font-size:clamp(23px,2vw,30px);line-height:1.05;letter-spacing:-.035em}
+.casapay-offer-card__price{display:flex;align-items:baseline;gap:6px;margin-top:24px}.casapay-offer-card__price strong{font-size:27px}.casapay-offer-card__price span{color:#5b747d;font-size:13px}
+.casapay-offer-card a{display:inline-flex;margin-top:18px;color:#006d99;font-size:14px;font-weight:850;text-underline-offset:4px}
+.casapay-offers-empty{padding:44px;border:1px dashed #94bdc9;border-radius:24px;background:var(--offers-paper);text-align:center}.casapay-offers-empty strong{font-size:24px}.casapay-offers-empty p{margin:8px 0 0;color:#5b747d}
+.casapay-offers-operator-cta{display:grid;grid-template-columns:1.2fr 1fr auto;align-items:center;gap:42px;padding:clamp(56px,7vw,100px) clamp(22px,8vw,130px);background:var(--offers-ink);color:#fff}
+.casapay-offers-operator-cta .casapay-offers-eyebrow{color:#82d7ef}.casapay-offers-operator-cta h2{max-width:650px;margin:12px 0 0;font-size:clamp(40px,5vw,72px);line-height:.92;letter-spacing:-.05em}.casapay-offers-operator-cta p{margin:0;color:#d5e4e8;font-size:18px;line-height:1.5}.casapay-offers-operator-cta>a{margin:0;white-space:nowrap}
+@media(max-width:1050px){.casapay-offers-hero{grid-template-columns:1fr}.casapay-offers-hero__visual{min-height:540px}.casapay-offers-section-heading{grid-template-columns:1fr;gap:22px}.casapay-offers-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.casapay-offers-operator-cta{grid-template-columns:1fr 1fr}.casapay-offers-operator-cta>a{justify-self:start}}
+@media(max-width:640px){.casapay-offers-hero{min-height:0}.casapay-offers-hero__copy{padding:58px 20px 48px}.casapay-offers-breadcrumb{margin-bottom:44px}.casapay-offers-hero h1{font-size:64px}.casapay-offers-hero__visual{min-height:430px}.casapay-offers-hero__ticket strong{font-size:25px}.casapay-offers-browse{padding:72px 16px}.casapay-offers-section-heading h2{font-size:48px}.casapay-offers-filters{display:grid;margin-top:42px}.casapay-offers-filter-set{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.casapay-offers-filter-set>span{grid-column:1/-1}.casapay-offers-filter-set button{width:100%}.casapay-offers-grid{grid-template-columns:1fr}.casapay-offers-operator-cta{grid-template-columns:1fr;gap:24px;padding:64px 20px}.casapay-offers-operator-cta h2{font-size:46px}.casapay-offers-operator-cta>a{width:100%}}
+@media(prefers-reduced-motion:reduce){.casapay-offer-card,.casapay-offer-card__media>img{transition:none}}

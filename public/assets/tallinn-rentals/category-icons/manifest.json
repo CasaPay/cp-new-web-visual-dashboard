@@ -1,0 +1,186 @@
+{
+  "schema": "casablue-rental-runtime-icons-v1",
+  "status": "user-approved-for-local-runtime",
+  "provider": "openai-codex",
+  "model": "gpt-image-2-high",
+  "count": 16,
+  "tile_background": "separate CSS layer",
+  "entries": [
+    {
+      "key": "student-housing",
+      "file": "student-housing.png",
+      "source_set": "V3.1 literal-context revision",
+      "sha256": "f7b0845ac18cf1bf16fc9d907b522cb8a37ce2511ff0c02993a6589235e8d667",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "co-living",
+      "file": "co-living.png",
+      "source_set": "V3 structural base",
+      "sha256": "000a48638fe6ba75f4222a790b6db2fb97915c65de5e90261102f0d075d1b0ea",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "build-to-rent",
+      "file": "build-to-rent.png",
+      "source_set": "V3 structural base",
+      "sha256": "b0bbb97b13d2480e2345d24af15867008dcb04024dcfd53534e45f77974c92b8",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "single-family",
+      "file": "single-family.png",
+      "source_set": "V3 structural base",
+      "sha256": "6a7417f1a015f095b7ac95531bd4f76b29bceded2ad3d8905ca3b1545e83bf90",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "apartments",
+      "file": "apartments.png",
+      "source_set": "V3 structural base",
+      "sha256": "de62329ee797bd4273f2bd81eb43f57a1391589095dc7848fe7aaaddd398f89d",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "rooms",
+      "file": "rooms.png",
+      "source_set": "V3 structural base",
+      "sha256": "e8008c25ec288216e908cfe0d9108cf9f25403bb6d8c0802c5299399f917923d",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "serviced-apartments",
+      "file": "serviced-apartments.png",
+      "source_set": "V3.1 literal-context revision",
+      "sha256": "fed8e9c7a1c62772f95ce2ac1796c5fe6a3dad8a9f1f9f4e2130a461d8e3fb1f",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "short-stays",
+      "file": "short-stays.png",
+      "source_set": "V3 structural base",
+      "sha256": "7ab3309c4c338a3f1f1bf9b73c5489491b4a7aa2031f8c57036b9253e814267d",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "pet-friendly",
+      "file": "pet-friendly.png",
+      "source_set": "V3.1 literal-context revision",
+      "sha256": "6a706a8fec81e7702ddcc6c8b9cdb14d193c0023b6e2d20cd459b6c3d97d2dcf",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "furnished",
+      "file": "furnished.png",
+      "source_set": "V3 structural base",
+      "sha256": "77c26bd0e0c2c9be3241a79a31254330e6949c79a6805374423ab957fef5ddcf",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "no-deposit-eligible",
+      "file": "no-deposit-eligible.png",
+      "source_set": "V3.1 literal-context revision",
+      "sha256": "f699faa5f58c10cf91ea641bc157e1af497a599c538bc090fa053db9be6f3fed",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "accessible-homes",
+      "file": "accessible-homes.png",
+      "source_set": "V3.1 literal-context revision",
+      "sha256": "100bff9dc3a127971c99408201a95ace01a820a4cc0571dc79bbc42bf44db431",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "family-homes",
+      "file": "family-homes.png",
+      "source_set": "V3.1 literal-context revision",
+      "sha256": "1c9bc284e1e89918057702a79c48eaac3bc85b020b66387d3b1de2c0b94b4c67",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "senior-living",
+      "file": "senior-living.png",
+      "source_set": "V3.1 literal-context revision",
+      "sha256": "146167676dc150070a2d5d6b2125c096a4dc36410df1d97e12b4149b3e4248b7",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "parking",
+      "file": "parking.png",
+      "source_set": "V3 structural base",
+      "sha256": "cf0dd07a912eda96cfba976c5f5eb9c552e51a621496d5feca91c581a462c589",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "key": "storage",
+      "file": "storage.png",
+      "source_set": "V3 structural base",
+      "sha256": "11d592a9b13fcd88ee40bb0bdf05ca90b23af9a61d74ed5ceafb028339f89482",
+      "dimensions": [
+        200,
+        200
+      ],
+      "mode": "RGBA"
+    }
+  ]
+}

@@ -1,0 +1,657 @@
+{
+  "schema": "fictional-operator-logo-generation-v1",
+  "created_at": "2026-08-29T21:59:06.446931+00:00",
+  "contract": "design/operator-logos.json",
+  "fictional": true,
+  "disclaimer": "All names and marks are fictional demonstration assets. They do not represent customers, partners, integrations or endorsements.",
+  "provider": "openai-codex",
+  "tier": "gpt-image-2-high",
+  "api_model": "gpt-image-2",
+  "generated_layer": "symbol-only",
+  "deterministic_wordmarks": true,
+  "brands": {
+    "foundry-field": {
+      "id": "foundry-field",
+      "success": true,
+      "elapsed_seconds": 18.14,
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "size": "1024x1024",
+      "prompt": "Create one original standalone brand SYMBOL for a FICTIONAL residential rental\noperator. This is an internal design mock, not a real company identity. Use a\nclean premium flat geometric style that remains recognizable at 48 px. Use\nexactly two solid colours, no gradients, no faux 3D, no bevel, no glow, no\nshadow and no hairline detail. The mark should feel credible for professional\nrental living: precise, warm, architectural and contemporary, not generic\nfintech and not property clip art.\n\nReturn a square PNG with a genuinely transparent background. Render exactly one\ncompact symbol centered at 58-68% of canvas width/height with at least 15% clear\nspace on every edge. Use only the supplied primary and accent colours. Keep\nforms bold, simple and optically balanced; no scene, mockup, tile, border,\nenclosing app icon, arbitrary outline style or isometric perspective.\n\nABSOLUTELY NO WORDS, LETTERS, INITIALS, NUMBERS, TYPOGRAPHY, MONOGRAMS,\nWATERMARKS, EXISTING LOGOS, TRADEMARKS, FLAGS, PEOPLE, KEYS OR ROOFTOP CLIP ART.\nDo not imitate any named real operator or hospitality brand.\n\nOperator segment: BTR in US.\nBrand character: industrial premium.\nSymbol brief: two heavy rectangular beams and one terracotta threshold defining an asymmetrical open courtyard, no letterform.\nPalette: primary #332A28, accent #C56842.\nThe background must remain transparent; do not render the tile color #F2ECE6.\n",
+      "original": "assets/generated/operator-logos/openai-gpt-image-2/symbols/originals/foundry-field.png",
+      "sha256": "4944111209c60df2a0545cd1c70483fc8cec8204341a935a62bd69978bd55398",
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/foundry-field.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          282,
+          248,
+          972,
+          966
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/foundry-field.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/foundry-field.png",
+      "final_sha256": "93b9ffc1115583a7bf68f3be7955eabadf6a89b8bb0d431bd9e2af0434da2172",
+      "exact_wordmark": "Foundry Field"
+    },
+    "juniper-circuit": {
+      "id": "juniper-circuit",
+      "success": true,
+      "elapsed_seconds": 20.3,
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "size": "1024x1024",
+      "prompt": "Create one original standalone brand SYMBOL for a FICTIONAL residential rental\noperator. This is an internal design mock, not a real company identity. Use a\nclean premium flat geometric style that remains recognizable at 48 px. Use\nexactly two solid colours, no gradients, no faux 3D, no bevel, no glow, no\nshadow and no hairline detail. The mark should feel credible for professional\nrental living: precise, warm, architectural and contemporary, not generic\nfintech and not property clip art.\n\nReturn a square PNG with a genuinely transparent background. Render exactly one\ncompact symbol centered at 58-68% of canvas width/height with at least 15% clear\nspace on every edge. Use only the supplied primary and accent colours. Keep\nforms bold, simple and optically balanced; no scene, mockup, tile, border,\nenclosing app icon, arbitrary outline style or isometric perspective.\n\nABSOLUTELY NO WORDS, LETTERS, INITIALS, NUMBERS, TYPOGRAPHY, MONOGRAMS,\nWATERMARKS, EXISTING LOGOS, TRADEMARKS, FLAGS, PEOPLE, KEYS OR ROOFTOP CLIP ART.\nDo not imitate any named real operator or hospitality brand.\n\nOperator segment: BTR in US.\nBrand character: nature urban.\nSymbol brief: three offset courtyard blocks linked by one branch-like path, flat geometric mark with no leaf silhouette or letterform.\nPalette: primary #244B3B, accent #8EB36B.\nThe background must remain transparent; do not render the tile color #EEF3E8.\n",
+      "original": "assets/generated/operator-logos/openai-gpt-image-2/symbols/originals/juniper-circuit.png",
+      "sha256": "1c219a0a90e4143913658a9465db04980a5785a24a36a974d6440fe5c7fd0b95",
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/juniper-circuit.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          278,
+          264,
+          976,
+          993
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/juniper-circuit.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/juniper-circuit.png",
+      "final_sha256": "6ea83db16ca4f3e0f92c5ed9cb74411efaaf4c05ca116a54be539bfe784f3e6e",
+      "exact_wordmark": "Juniper Circuit"
+    },
+    "brickfern": {
+      "id": "brickfern",
+      "success": true,
+      "elapsed_seconds": 26.1,
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "size": "1024x1024",
+      "prompt": "Create one original standalone brand SYMBOL for a FICTIONAL residential rental\noperator. This is an internal design mock, not a real company identity. Use a\nclean premium flat geometric style that remains recognizable at 48 px. Use\nexactly two solid colours, no gradients, no faux 3D, no bevel, no glow, no\nshadow and no hairline detail. The mark should feel credible for professional\nrental living: precise, warm, architectural and contemporary, not generic\nfintech and not property clip art.\n\nReturn a square PNG with a genuinely transparent background. Render exactly one\ncompact symbol centered at 58-68% of canvas width/height with at least 15% clear\nspace on every edge. Use only the supplied primary and accent colours. Keep\nforms bold, simple and optically balanced; no scene, mockup, tile, border,\nenclosing app icon, arbitrary outline style or isometric perspective.\n\nABSOLUTELY NO WORDS, LETTERS, INITIALS, NUMBERS, TYPOGRAPHY, MONOGRAMS,\nWATERMARKS, EXISTING LOGOS, TRADEMARKS, FLAGS, PEOPLE, KEYS OR ROOFTOP CLIP ART.\nDo not imitate any named real operator or hospitality brand.\n\nOperator segment: BTR in UK.\nBrand character: heritage renewed.\nSymbol brief: alternating masonry modules opening into one curved negative-space frond, flat balanced heritage mark.\nPalette: primary #4A302B, accent #A46852.\nThe background must remain transparent; do not render the tile color #F3E9E2.\n",
+      "original": "assets/generated/operator-logos/openai-gpt-image-2/symbols/originals/brickfern.png",
+      "sha256": "5b7957ec66b3096c62828853913d5bb18e25a354c9d4310ccb629b4e3a288e27",
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/brickfern.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          309,
+          227,
+          930,
+          1027
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/brickfern.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/brickfern.png",
+      "final_sha256": "6cc72a9db7f32f52c24d2633d45ce61c1cc64da351fa18d671abb4919dd36b7a",
+      "exact_wordmark": "Brickfern"
+    },
+    "docklight": {
+      "id": "docklight",
+      "success": true,
+      "elapsed_seconds": 20.52,
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "size": "1024x1024",
+      "prompt": "Create one original standalone brand SYMBOL for a FICTIONAL residential rental\noperator. This is an internal design mock, not a real company identity. Use a\nclean premium flat geometric style that remains recognizable at 48 px. Use\nexactly two solid colours, no gradients, no faux 3D, no bevel, no glow, no\nshadow and no hairline detail. The mark should feel credible for professional\nrental living: precise, warm, architectural and contemporary, not generic\nfintech and not property clip art.\n\nReturn a square PNG with a genuinely transparent background. Render exactly one\ncompact symbol centered at 58-68% of canvas width/height with at least 15% clear\nspace on every edge. Use only the supplied primary and accent colours. Keep\nforms bold, simple and optically balanced; no scene, mockup, tile, border,\nenclosing app icon, arbitrary outline style or isometric perspective.\n\nABSOLUTELY NO WORDS, LETTERS, INITIALS, NUMBERS, TYPOGRAPHY, MONOGRAMS,\nWATERMARKS, EXISTING LOGOS, TRADEMARKS, FLAGS, PEOPLE, KEYS OR ROOFTOP CLIP ART.\nDo not imitate any named real operator or hospitality brand.\n\nOperator segment: PBSA in UK.\nBrand character: city student.\nSymbol brief: two parallel quay lines framing a small four-ray light above an open-page negative space, no letterform.\nPalette: primary #143B67, accent #3B9CCB.\nThe background must remain transparent; do not render the tile color #E8F4FF.\n",
+      "original": "assets/generated/operator-logos/openai-gpt-image-2/symbols/originals/docklight.png",
+      "sha256": "fcf0febbb41395e35b173b359f0f51088266eb59327458d61219b5dada1c487d",
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/docklight.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          361,
+          295,
+          893,
+          914
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/docklight.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/docklight.png",
+      "final_sha256": "8c31a8bc8a952063feb5fb4e68ea6b7664ee4675ec0d2140cf06cfda8f27ab1a",
+      "exact_wordmark": "Docklight"
+    },
+    "gather-yard": {
+      "id": "gather-yard",
+      "success": true,
+      "elapsed_seconds": 21.29,
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "size": "1024x1024",
+      "prompt": "Create one original standalone brand SYMBOL for a FICTIONAL residential rental\noperator. This is an internal design mock, not a real company identity. Use a\nclean premium flat geometric style that remains recognizable at 48 px. Use\nexactly two solid colours, no gradients, no faux 3D, no bevel, no glow, no\nshadow and no hairline detail. The mark should feel credible for professional\nrental living: precise, warm, architectural and contemporary, not generic\nfintech and not property clip art.\n\nReturn a square PNG with a genuinely transparent background. Render exactly one\ncompact symbol centered at 58-68% of canvas width/height with at least 15% clear\nspace on every edge. Use only the supplied primary and accent colours. Keep\nforms bold, simple and optically balanced; no scene, mockup, tile, border,\nenclosing app icon, arbitrary outline style or isometric perspective.\n\nABSOLUTELY NO WORDS, LETTERS, INITIALS, NUMBERS, TYPOGRAPHY, MONOGRAMS,\nWATERMARKS, EXISTING LOGOS, TRADEMARKS, FLAGS, PEOPLE, KEYS OR ROOFTOP CLIP ART.\nDo not imitate any named real operator or hospitality brand.\n\nOperator segment: Co-living in UK.\nBrand character: friendly community.\nSymbol brief: three asymmetrical wall segments gathering around a small circular shared table and yard, no houses, people or letterform.\nPalette: primary #5A3824, accent #E39B4B.\nThe background must remain transparent; do not render the tile color #FFF1D9.\n",
+      "original": "assets/generated/operator-logos/openai-gpt-image-2/symbols/originals/gather-yard.png",
+      "sha256": "099800326d1bf4dd4599262add6f70adf957474cee36c73111e6c076e5332a7a",
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/gather-yard.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          247,
+          214,
+          1001,
+          1043
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/gather-yard.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/gather-yard.png",
+      "final_sha256": "a3c89d899b41071fa01ad9f8bb58600ac76a5cc87eddd5d5cd8560dd1434cb3f",
+      "exact_wordmark": "Gather Yard"
+    },
+    "parlour-stay": {
+      "id": "parlour-stay",
+      "success": true,
+      "elapsed_seconds": 24.9,
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "size": "1024x1024",
+      "prompt": "Create one original standalone brand SYMBOL for a FICTIONAL residential rental\noperator. This is an internal design mock, not a real company identity. Use a\nclean premium flat geometric style that remains recognizable at 48 px. Use\nexactly two solid colours, no gradients, no faux 3D, no bevel, no glow, no\nshadow and no hairline detail. The mark should feel credible for professional\nrental living: precise, warm, architectural and contemporary, not generic\nfintech and not property clip art.\n\nReturn a square PNG with a genuinely transparent background. Render exactly one\ncompact symbol centered at 58-68% of canvas width/height with at least 15% clear\nspace on every edge. Use only the supplied primary and accent colours. Keep\nforms bold, simple and optically balanced; no scene, mockup, tile, border,\nenclosing app icon, arbitrary outline style or isometric perspective.\n\nABSOLUTELY NO WORDS, LETTERS, INITIALS, NUMBERS, TYPOGRAPHY, MONOGRAMS,\nWATERMARKS, EXISTING LOGOS, TRADEMARKS, FLAGS, PEOPLE, KEYS OR ROOFTOP CLIP ART.\nDo not imitate any named real operator or hospitality brand.\n\nOperator segment: Serviced apartments in UK.\nBrand character: boutique hospitality.\nSymbol brief: paired doorway arches with one off-centre quiet-brass threshold dot, elegant boutique residence mark with no letterform.\nPalette: primary #2F2C35, accent #B28A55.\nThe background must remain transparent; do not render the tile color #F2EEE8.\n",
+      "original": "assets/generated/operator-logos/openai-gpt-image-2/symbols/originals/parlour-stay.png",
+      "sha256": "78fbb1752611150575cd86774c99ba23a85b1f229cbc6501b90d4333313aba68",
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/parlour-stay.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          346,
+          290,
+          908,
+          911
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/parlour-stay.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/parlour-stay.png",
+      "final_sha256": "fbf2d252d710b5b2cb663ac8c1098f51b22c8f255aecdcf0cc6cd8981122bfbd",
+      "exact_wordmark": "Parlour Stay"
+    },
+    "lumahaven": {
+      "id": "lumahaven",
+      "success": true,
+      "elapsed_seconds": 22.08,
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "size": "1024x1024",
+      "prompt": "Create one original standalone brand SYMBOL for a FICTIONAL residential rental\noperator. This is an internal design mock, not a real company identity. Use a\nclean premium flat geometric style that remains recognizable at 48 px. Use\nexactly two solid colours, no gradients, no faux 3D, no bevel, no glow, no\nshadow and no hairline detail. The mark should feel credible for professional\nrental living: precise, warm, architectural and contemporary, not generic\nfintech and not property clip art.\n\nReturn a square PNG with a genuinely transparent background. Render exactly one\ncompact symbol centered at 58-68% of canvas width/height with at least 15% clear\nspace on every edge. Use only the supplied primary and accent colours. Keep\nforms bold, simple and optically balanced; no scene, mockup, tile, border,\nenclosing app icon, arbitrary outline style or isometric perspective.\n\nABSOLUTELY NO WORDS, LETTERS, INITIALS, NUMBERS, TYPOGRAPHY, MONOGRAMS,\nWATERMARKS, EXISTING LOGOS, TRADEMARKS, FLAGS, PEOPLE, KEYS OR ROOFTOP CLIP ART.\nDo not imitate any named real operator or hospitality brand.\n\nOperator segment: BTR in EU.\nBrand character: continental modern.\nSymbol brief: two flat offset frames protecting one small central square, precise modern residential mark with no gradient.\nPalette: primary #253947, accent #77B6C2.\nThe background must remain transparent; do not render the tile color #EDF2F4.\n",
+      "original": "assets/generated/operator-logos/openai-gpt-image-2/symbols/originals/lumahaven.png",
+      "sha256": "9252a96a8ba1019cff020f02ac043340dee19469902522f6b93f633ffb2ffc98",
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/lumahaven.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          294,
+          257,
+          959,
+          967
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/lumahaven.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/lumahaven.png",
+      "final_sha256": "da0e0ae747c074d524cfdfd1f4ca726003da6adcb75bef14bc4828fac4d353a3",
+      "exact_wordmark": "LumaHaven"
+    },
+    "velahaus": {
+      "id": "velahaus",
+      "success": true,
+      "elapsed_seconds": 23.42,
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "size": "1024x1024",
+      "prompt": "Create one original standalone brand SYMBOL for a FICTIONAL residential rental\noperator. This is an internal design mock, not a real company identity. Use a\nclean premium flat geometric style that remains recognizable at 48 px. Use\nexactly two solid colours, no gradients, no faux 3D, no bevel, no glow, no\nshadow and no hairline detail. The mark should feel credible for professional\nrental living: precise, warm, architectural and contemporary, not generic\nfintech and not property clip art.\n\nReturn a square PNG with a genuinely transparent background. Render exactly one\ncompact symbol centered at 58-68% of canvas width/height with at least 15% clear\nspace on every edge. Use only the supplied primary and accent colours. Keep\nforms bold, simple and optically balanced; no scene, mockup, tile, border,\nenclosing app icon, arbitrary outline style or isometric perspective.\n\nABSOLUTELY NO WORDS, LETTERS, INITIALS, NUMBERS, TYPOGRAPHY, MONOGRAMS,\nWATERMARKS, EXISTING LOGOS, TRADEMARKS, FLAGS, PEOPLE, KEYS OR ROOFTOP CLIP ART.\nDo not imitate any named real operator or hospitality brand.\n\nOperator segment: BTR in EU.\nBrand character: architectural elegant.\nSymbol brief: three architectural planes surrounding a small triangular sunlit courtyard viewed from above, no letterform.\nPalette: primary #403238, accent #C47E60.\nThe background must remain transparent; do not render the tile color #F6ECE5.\n",
+      "original": "assets/generated/operator-logos/openai-gpt-image-2/symbols/originals/velahaus.png",
+      "sha256": "79acc840fc030b2ded0c1cdb4390da93bb405b1e36c48110410b6dba7e4d0029",
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/velahaus.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          240,
+          179,
+          976,
+          1051
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/velahaus.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/velahaus.png",
+      "final_sha256": "019399e811e091259f8e144d5da4f723ff43fba20da76f422e79a4926250464c",
+      "exact_wordmark": "VelaHaus"
+    },
+    "linden-orbit": {
+      "id": "linden-orbit",
+      "success": true,
+      "elapsed_seconds": 20.89,
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "size": "1024x1024",
+      "prompt": "Create one original standalone brand SYMBOL for a FICTIONAL residential rental\noperator. This is an internal design mock, not a real company identity. Use a\nclean premium flat geometric style that remains recognizable at 48 px. Use\nexactly two solid colours, no gradients, no faux 3D, no bevel, no glow, no\nshadow and no hairline detail. The mark should feel credible for professional\nrental living: precise, warm, architectural and contemporary, not generic\nfintech and not property clip art.\n\nReturn a square PNG with a genuinely transparent background. Render exactly one\ncompact symbol centered at 58-68% of canvas width/height with at least 15% clear\nspace on every edge. Use only the supplied primary and accent colours. Keep\nforms bold, simple and optically balanced; no scene, mockup, tile, border,\nenclosing app icon, arbitrary outline style or isometric perspective.\n\nABSOLUTELY NO WORDS, LETTERS, INITIALS, NUMBERS, TYPOGRAPHY, MONOGRAMS,\nWATERMARKS, EXISTING LOGOS, TRADEMARKS, FLAGS, PEOPLE, KEYS OR ROOFTOP CLIP ART.\nDo not imitate any named real operator or hospitality brand.\n\nOperator segment: PBSA in EU.\nBrand character: pan european student.\nSymbol brief: three open study windows orbiting one central light dot, energetic mature student mark with no leaf or letterform.\nPalette: primary #2E4A37, accent #83B268.\nThe background must remain transparent; do not render the tile color #EAF4E6.\n",
+      "original": "assets/generated/operator-logos/openai-gpt-image-2/symbols/originals/linden-orbit.png",
+      "sha256": "90960ef0c96102f33a2b275927be902b69683c2431d9017c6d4fc4bb3d150eec",
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/linden-orbit.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          209,
+          197,
+          998,
+          952
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/linden-orbit.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/linden-orbit.png",
+      "final_sha256": "828c4cf3550a51ec8b645b9329b0e8771d32acf225a50bb172f41ad408d24be5",
+      "exact_wordmark": "Linden Orbit"
+    },
+    "canvas-row": {
+      "id": "canvas-row",
+      "success": true,
+      "elapsed_seconds": 20.85,
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "size": "1024x1024",
+      "prompt": "Create one original standalone brand SYMBOL for a FICTIONAL residential rental\noperator. This is an internal design mock, not a real company identity. Use a\nclean premium flat geometric style that remains recognizable at 48 px. Use\nexactly two solid colours, no gradients, no faux 3D, no bevel, no glow, no\nshadow and no hairline detail. The mark should feel credible for professional\nrental living: precise, warm, architectural and contemporary, not generic\nfintech and not property clip art.\n\nReturn a square PNG with a genuinely transparent background. Render exactly one\ncompact symbol centered at 58-68% of canvas width/height with at least 15% clear\nspace on every edge. Use only the supplied primary and accent colours. Keep\nforms bold, simple and optically balanced; no scene, mockup, tile, border,\nenclosing app icon, arbitrary outline style or isometric perspective.\n\nABSOLUTELY NO WORDS, LETTERS, INITIALS, NUMBERS, TYPOGRAPHY, MONOGRAMS,\nWATERMARKS, EXISTING LOGOS, TRADEMARKS, FLAGS, PEOPLE, KEYS OR ROOFTOP CLIP ART.\nDo not imitate any named real operator or hospitality brand.\n\nOperator segment: PBSA/co-living in EU.\nBrand character: creative urban.\nSymbol brief: three offset rectangular canvases forming a pedestrian passage, arts-led urban mark with no loop, ribbon or letterform.\nPalette: primary #55334E, accent #C36B9E.\nThe background must remain transparent; do not render the tile color #F5EAF2.\n",
+      "original": "assets/generated/operator-logos/openai-gpt-image-2/symbols/originals/canvas-row.png",
+      "sha256": "444e93bc598c86365a08fc56908f7ac7c80f4f188f8b0b38348be3a5ea671095",
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/canvas-row.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          299,
+          252,
+          953,
+          1015
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/canvas-row.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/canvas-row.png",
+      "final_sha256": "33051cede0175d7feda5a7a81b076156aa4bdc04cb14b26551c6da62fdaf4347",
+      "exact_wordmark": "Canvas Row"
+    },
+    "courtyard-kin": {
+      "id": "courtyard-kin",
+      "success": true,
+      "elapsed_seconds": 22.56,
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "size": "1024x1024",
+      "prompt": "Create one original standalone brand SYMBOL for a FICTIONAL residential rental\noperator. This is an internal design mock, not a real company identity. Use a\nclean premium flat geometric style that remains recognizable at 48 px. Use\nexactly two solid colours, no gradients, no faux 3D, no bevel, no glow, no\nshadow and no hairline detail. The mark should feel credible for professional\nrental living: precise, warm, architectural and contemporary, not generic\nfintech and not property clip art.\n\nReturn a square PNG with a genuinely transparent background. Render exactly one\ncompact symbol centered at 58-68% of canvas width/height with at least 15% clear\nspace on every edge. Use only the supplied primary and accent colours. Keep\nforms bold, simple and optically balanced; no scene, mockup, tile, border,\nenclosing app icon, arbitrary outline style or isometric perspective.\n\nABSOLUTELY NO WORDS, LETTERS, INITIALS, NUMBERS, TYPOGRAPHY, MONOGRAMS,\nWATERMARKS, EXISTING LOGOS, TRADEMARKS, FLAGS, PEOPLE, KEYS OR ROOFTOP CLIP ART.\nDo not imitate any named real operator or hospitality brand.\n\nOperator segment: Co-living in EU.\nBrand character: shared courtyard.\nSymbol brief: four differently sized corner walls around a small circular shared garden, inclusive flat geometry without a cross or app-icon shape.\nPalette: primary #23443E, accent #58A694.\nThe background must remain transparent; do not render the tile color #E9F3F0.\n",
+      "original": "assets/generated/operator-logos/openai-gpt-image-2/symbols/originals/courtyard-kin.png",
+      "sha256": "a7a45e0cd75d5d81c44fb13fd5d4a182205a771558fb645a7fba18c7a3280cca",
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/courtyard-kin.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          335,
+          308,
+          918,
+          945
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/courtyard-kin.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/courtyard-kin.png",
+      "final_sha256": "f25b56e9b995e10db92cfc16b042307cda639c52b8e58cc8e380c4ae5909baf1",
+      "exact_wordmark": "Courtyard Kin"
+    },
+    "portico-studios": {
+      "id": "portico-studios",
+      "success": true,
+      "elapsed_seconds": 23.45,
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "size": "1024x1024",
+      "prompt": "Create one original standalone brand SYMBOL for a FICTIONAL residential rental\noperator. This is an internal design mock, not a real company identity. Use a\nclean premium flat geometric style that remains recognizable at 48 px. Use\nexactly two solid colours, no gradients, no faux 3D, no bevel, no glow, no\nshadow and no hairline detail. The mark should feel credible for professional\nrental living: precise, warm, architectural and contemporary, not generic\nfintech and not property clip art.\n\nReturn a square PNG with a genuinely transparent background. Render exactly one\ncompact symbol centered at 58-68% of canvas width/height with at least 15% clear\nspace on every edge. Use only the supplied primary and accent colours. Keep\nforms bold, simple and optically balanced; no scene, mockup, tile, border,\nenclosing app icon, arbitrary outline style or isometric perspective.\n\nABSOLUTELY NO WORDS, LETTERS, INITIALS, NUMBERS, TYPOGRAPHY, MONOGRAMS,\nWATERMARKS, EXISTING LOGOS, TRADEMARKS, FLAGS, PEOPLE, KEYS OR ROOFTOP CLIP ART.\nDo not imitate any named real operator or hospitality brand.\n\nOperator segment: Serviced apartments in EU.\nBrand character: city hospitality.\nSymbol brief: three freestanding columns and a shallow lintel framing an open passage, premium city-residence mark with no letterform.\nPalette: primary #302D38, accent #8B7B9F.\nThe background must remain transparent; do not render the tile color #EEECEF.\n",
+      "original": "assets/generated/operator-logos/openai-gpt-image-2/symbols/originals/portico-studios.png",
+      "sha256": "89a67b3338f57f34d3547971a4df3921a7b9179fd2c4f78bc4cf359ea6664dad",
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/portico-studios.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          303,
+          313,
+          951,
+          941
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/portico-studios.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/portico-studios.png",
+      "final_sha256": "696c6cd1cc25af77dc38883c84835cfcfa6540ed07e3664ae78a8dd0b21727bd",
+      "exact_wordmark": "Portico Studios"
+    },
+    "harborloom": {
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/harborloom.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          186,
+          245,
+          1069,
+          974
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/harborloom.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/harborloom.png",
+      "final_sha256": "fdda0de0b777de207b0b13e11b1cbc0a2cbc2b3b2f380f4a4d2851f3ce4f6eff",
+      "exact_wordmark": "Harborloom"
+    },
+    "campus-kite": {
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/campus-kite.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          365,
+          191,
+          935,
+          1091
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/campus-kite.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/campus-kite.png",
+      "final_sha256": "3d5f2d54e2c65b578257790cdaa976c51a4525d682e1882fbbfb0e2d53a68833",
+      "exact_wordmark": "Campus Kite"
+    },
+    "scholarwell": {
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/scholarwell.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          304,
+          277,
+          951,
+          935
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/scholarwell.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/scholarwell.png",
+      "final_sha256": "92b008eb0c8b271ea8a1d9fe9c0367c91aaa79851282215c3141c108a865d21b",
+      "exact_wordmark": "Scholarwell"
+    },
+    "kinstead": {
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/kinstead.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          207,
+          206,
+          1048,
+          1022
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/kinstead.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/kinstead.png",
+      "final_sha256": "897c4b9c0e91cb7f3e3db3da10a43f418f04430c12ec944d8d03d3b44843f5ef",
+      "exact_wordmark": "Kinstead"
+    },
+    "roamarc": {
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/roamarc.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          336,
+          186,
+          917,
+          1040
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/roamarc.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/roamarc.png",
+      "final_sha256": "e89e058ab53568f793d4d7dc0c97c132ab7263c2a1d1ece7e85159594f9ccbca",
+      "exact_wordmark": "RoamArc Suites"
+    },
+    "northkind": {
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/northkind.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          270,
+          251,
+          984,
+          1007
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/northkind.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/northkind.png",
+      "final_sha256": "ceedd601ee45f9e3fea7058f5a8660d4df9edc6370f315a6fead3afa8ff1c0e3",
+      "exact_wordmark": "Northkind"
+    },
+    "hallmere": {
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/hallmere.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          315,
+          244,
+          934,
+          1037
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/hallmere.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/hallmere.png",
+      "final_sha256": "fad67d846b8bd9573299344a01827c190119b76a14316cdfb645770515bd2c0d",
+      "exact_wordmark": "Hallmere"
+    },
+    "hearthlane": {
+      "normalized_symbol": "assets/generated/operator-logos/openai-gpt-image-2/symbols/normalized/hearthlane.png",
+      "symbol_qa": {
+        "alpha_method": "corner-background-key",
+        "source_size": [
+          1254,
+          1254
+        ],
+        "source_bbox": [
+          295,
+          330,
+          959,
+          912
+        ],
+        "normalized_size": [
+          118,
+          118
+        ],
+        "edge_alpha_max": 0
+      },
+      "final_400": "assets/generated/operator-logos/openai-gpt-image-2/final/400/hearthlane.png",
+      "final_200": "assets/generated/operator-logos/openai-gpt-image-2/final/200/hearthlane.png",
+      "final_sha256": "7c76184be43c5dfa1cb925ee3dc705ae5c79e98747b53830cd6decfd99db0416",
+      "exact_wordmark": "Hearthlane"
+    }
+  },
+  "status": "composed-review-ready",
+  "completed_at": "2026-08-29T22:00:42.314861+00:00",
+  "failures": [],
+  "runtime_registry": "data/operator-logos.json",
+  "contact_sheet": "assets/generated/operator-logos/openai-gpt-image-2/fictional-operator-logo-contact-sheet.png",
+  "human_approval": {
+    "required": true,
+    "status": "implementation-authorized-for-internal-demo",
+    "public_use": false,
+    "notes": "Fictional mock brands only; no customer, partner or endorsement claim."
+  }
+}

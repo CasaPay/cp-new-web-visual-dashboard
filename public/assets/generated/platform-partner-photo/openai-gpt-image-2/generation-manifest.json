@@ -1,0 +1,20 @@
+{
+  "schema": "casapay-platform-partner-photo-v1",
+  "created_at": "2026-08-30T09:24:03.903532+00:00",
+  "provider": "openai-codex",
+  "tier": "gpt-image-2-high",
+  "api_model": "gpt-image-2",
+  "quality": "high",
+  "aspect_ratio": "landscape",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGB",
+  "elapsed_seconds": 54.38,
+  "prompt": "assets/generated/platform-partner-photo/openai-gpt-image-2/prompt.txt",
+  "output": "assets/generated/platform-partner-photo/openai-gpt-image-2/platform-partner-human-life-landscape.png",
+  "sha256": "a92e0c20a2b6d21ab6247d09ceee422c44a374a43a4093cabb70d57e0c3dac25",
+  "human_life_photo_only": true,
+  "technical_visuals_prohibited": true
+}

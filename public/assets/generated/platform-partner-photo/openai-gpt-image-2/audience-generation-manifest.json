@@ -1,0 +1,60 @@
+{
+  "schema": "casapay-platform-partner-audience-photos-v1",
+  "created_at": "2026-08-30T09:47:13.789748+00:00",
+  "provider": "openai-codex",
+  "tier": "gpt-image-2-high",
+  "api_model": "gpt-image-2",
+  "quality": "high",
+  "technical_visuals_prohibited": true,
+  "count": 3,
+  "photos": {
+    "accounting-platform": {
+      "id": "accounting-platform",
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "elapsed_seconds": 50.79,
+      "prompt": "Create one premium, photorealistic editorial website photograph for CasaPay's Platform Partner narrative. Show credible human life in a contemporary European rental-residential setting. Natural daylight, warm modern apartment-building lobby, leasing office or resident community lounge; premium but lived-in, real skin texture, authentic candid interaction, relaxed smart-casual professionals in their 30s\u201340s, diverse European casting, 35mm documentary lens feeling, center-safe landscape 3:2 composition that also crops well to square/mobile.\n\nSTRICTLY NO technical diagram, API graphic, flowchart, floating UI, dashboard, code, hologram, data visualization, app mockup, readable screen, readable text, letters, numbers, logos, branded clothing, watermark, futuristic tech aesthetic, neon, server room, stock handshake, staged boardroom, empty architecture, illustration or 3D render. Any laptop or paperwork must face away from camera or be softly out of focus with no readable content. Hands, faces and anatomy must be natural.\n\n\nNarrative: an accounting-platform partnership manager and a rental operator's finance manager collaborate at a table in a residential community space. A closed notebook, calculator-like object without visible numbers, and laptop turned away may be present. They share a calm moment of clarity while residents move naturally in the background. Emphasize financial confidence and operator progress, not dashboards.",
+      "output": "assets/generated/platform-partner-photo/openai-gpt-image-2/audiences/accounting-platform.png",
+      "sha256": "064caabe222b8fb32c80458a4b4478589623197d693853798c55744dfb264e10"
+    },
+    "pms-platform": {
+      "id": "pms-platform",
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "elapsed_seconds": 53.02,
+      "prompt": "Create one premium, photorealistic editorial website photograph for CasaPay's Platform Partner narrative. Show credible human life in a contemporary European rental-residential setting. Natural daylight, warm modern apartment-building lobby, leasing office or resident community lounge; premium but lived-in, real skin texture, authentic candid interaction, relaxed smart-casual professionals in their 30s\u201340s, diverse European casting, 35mm documentary lens feeling, center-safe landscape 3:2 composition that also crops well to square/mobile.\n\nSTRICTLY NO technical diagram, API graphic, flowchart, floating UI, dashboard, code, hologram, data visualization, app mockup, readable screen, readable text, letters, numbers, logos, branded clothing, watermark, futuristic tech aesthetic, neon, server room, stock handshake, staged boardroom, empty architecture, illustration or 3D render. Any laptop or paperwork must face away from camera or be softly out of focus with no readable content. Hands, faces and anatomy must be natural.\n\n\nNarrative: a female property-management-platform product lead and a male multi-site rental operator walk together through a bright apartment-building communal lounge while discussing a newly onboarded building. They are mid-conversation, naturally engaged; a resident enters in the soft background. Emphasize operational partnership and better resident life, not software.",
+      "output": "assets/generated/platform-partner-photo/openai-gpt-image-2/audiences/pms-platform.png",
+      "sha256": "781ad1a249012885d42c35d0dc25eac25e364c4891f403249c97106f73e71cc5"
+    },
+    "crm-platform": {
+      "id": "crm-platform",
+      "provider": "openai-codex",
+      "tier": "gpt-image-2-high",
+      "api_model": "gpt-image-2",
+      "quality": "high",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "elapsed_seconds": 54.41,
+      "prompt": "Create one premium, photorealistic editorial website photograph for CasaPay's Platform Partner narrative. Show credible human life in a contemporary European rental-residential setting. Natural daylight, warm modern apartment-building lobby, leasing office or resident community lounge; premium but lived-in, real skin texture, authentic candid interaction, relaxed smart-casual professionals in their 30s\u201340s, diverse European casting, 35mm documentary lens feeling, center-safe landscape 3:2 composition that also crops well to square/mobile.\n\nSTRICTLY NO technical diagram, API graphic, flowchart, floating UI, dashboard, code, hologram, data visualization, app mockup, readable screen, readable text, letters, numbers, logos, branded clothing, watermark, futuristic tech aesthetic, neon, server room, stock handshake, staged boardroom, empty architecture, illustration or 3D render. Any laptop or paperwork must face away from camera or be softly out of focus with no readable content. Hands, faces and anatomy must be natural.\n\n\nNarrative: a customer-success professional from a CRM platform sits with a rental operator's support lead in a welcoming residential leasing lounge. They review a resident support handoff together with empathy and focus; a resident is comfortably seated in the soft background. Emphasize connected customer support and human service, not screens.",
+      "output": "assets/generated/platform-partner-photo/openai-gpt-image-2/audiences/crm-platform.png",
+      "sha256": "a71c1f63a1e7f91d18b984ca82438bc2fe020f17477d2492ce38d9b96137b07d"
+    }
+  }
+}

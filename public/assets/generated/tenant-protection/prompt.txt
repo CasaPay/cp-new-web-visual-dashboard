@@ -1,0 +1,8 @@
+Use case: photorealistic-natural
+Asset type: CasaPay Tenant Protection homepage section and feature landing hero photo
+Primary request: Create an original candid editorial lifestyle photograph of a young adult couple happily unpacking together in their new rental apartment.
+Reference role: The supplied Tenant Protection screenshot informed only the general composition and warm move-in mood; identities, text and layout were not copied.
+Scene: Bright modern apartment during move-in, open cardboard boxes and subtle packing materials.
+Style: Premium natural lifestyle photography with realistic texture and restrained CasaPay teal accents.
+Composition: Wide 3:2 landscape with both subjects centered slightly right and safe responsive crop room.
+Constraints: No logos, text, watermark, brand names, staged handshake or distorted hands/faces.
