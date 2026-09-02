@@ -7,6 +7,7 @@ The complete approved scope is preserved from `prelive`, including the original 
 ## Included routes
 
 - Tenant homepage, Tallinn and London city pages
+- City search behavior for active cities, pilot-mode cities, and legacy inactive-city fallbacks
 - Tenant Offers, Tenant Protection, and Help pages
 - Partner Operator, Platforms, Marketplaces, Capital, Referrals, and RentLink pages
 - All 20 `/partner/en/est` partner navigation destinations

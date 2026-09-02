@@ -37,12 +37,14 @@
       const requestedPath = params.get('path') || '/';
       const routePath = requestedPath.startsWith('/') ? requestedPath : '/';
       const mobile = params.get('mobile') === '1';
+      const comparisonState = params.get('state');
+      const comparisonQuery = `?comparison${comparisonState ? `&state=${encodeURIComponent(comparisonState)}` : ''}`;
       const sourceWidth = mobile ? 390 : 1280;
       const sourceHeight = mobile ? 844 : 720;
       document.querySelector('#route-label').textContent = `${routePath === '/' ? 'Homepage' : routePath}${mobile ? ' · mobile' : ''}`;
       document.querySelector('#dimensions').textContent = `${sourceWidth} × ${sourceHeight}`;
-      document.querySelector('#reference').src = `http://127.0.0.1:4175${routePath}?comparison`;
-      document.querySelector('#implementation').src = `http://127.0.0.1:3000${routePath}?comparison`;
+      document.querySelector('#reference').src = `http://127.0.0.1:4175${routePath}${comparisonQuery}`;
+      document.querySelector('#implementation').src = `http://127.0.0.1:3000${routePath}${comparisonQuery}`;
       const resize = () => {
         document.querySelectorAll('.frame').forEach((frame) => {
           const scale = mobile ? Math.min(frame.clientWidth / sourceWidth, .88) : frame.clientWidth / sourceWidth;
