@@ -3,5 +3,5 @@ import { siteResponse } from "@/lib/site-page";
 export const dynamic = "force-static";
 
 export function GET() {
-  return siteResponse("partner-operator.html");
+  return siteResponse("partner-operator.html", "/partner/operator");
 }

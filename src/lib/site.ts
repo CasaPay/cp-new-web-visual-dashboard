@@ -45,7 +45,7 @@ export const cityData: Record<string, CityData> = {
     ...tallinn,
     city: "Tallinn",
     country: "Estonia",
-    route: "/en/est/tallinn",
+    route: "/tenant/en/est/tallinn",
     currencyCode: "EUR",
     currencySymbol: "€",
     segments: [
@@ -59,22 +59,21 @@ export const cityData: Record<string, CityData> = {
 };
 
 export const tenantLinks = [
-  ["CasaPay Offers", "/offers"],
-  ["Tenant Protect", "/tenant-protection"],
-  ["CasaPay+", "/casapay-plus"],
+  ["CasaPay Offers", "/tenant/offers"],
+  ["Tenant Protect", "/tenant/tenant-protection"],
+  ["CasaPay+", "/tenant/casapay-plus"],
 ] as const;
 
 export const operatorLinks = [
-  ["CasaPay RentLink", "/rentlink"],
-  ["CasaPay Offers", "/partner/offers"],
-  ["CasaPay+", "/partner/en/est/solution/casapay-plus"],
-  ["CasaPay Capital", "/partner/capital"],
-  ["CasaPay Referrals", "/partner/referrals"],
+  ["CasaPay RentLink", "/partner/operator/rentlink"],
+  ["CasaPay Offers", "/partner/operator/offers"],
+  ["CasaPay+", "/partner/operator/casapay-plus"],
+  ["CasaPay Capital", "/partner/operator/capital"],
+  ["CasaPay Referrals", "/partner/operator/referrals"],
 ] as const;
 
 export const partnerLinks = [
   ["For platforms", "/partner/platforms"],
-  ["For marketplaces", "/partner/marketplaces"],
 ] as const;
 
-export const isPartnerPath = (path: string) => path === "/rentlink" || path.startsWith("/partner");
+export const isPartnerPath = (path: string) => path.startsWith("/partner");

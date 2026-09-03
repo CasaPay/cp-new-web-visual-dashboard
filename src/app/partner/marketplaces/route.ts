@@ -1,7 +1,5 @@
-import { siteResponse } from "@/lib/site-page";
+export const dynamic = "force-dynamic";
 
-export const dynamic = "force-static";
-
-export function GET() {
-  return siteResponse("partner-marketplaces.html");
+export function GET(request: Request) {
+  return Response.redirect(new URL("/partner/operator", request.url), 307);
 }

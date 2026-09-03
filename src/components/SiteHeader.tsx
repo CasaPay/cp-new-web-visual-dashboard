@@ -45,12 +45,12 @@ export function SiteHeader() {
   return (
     <header className="site-header" ref={headerRef}>
       <div className="header-inner">
-        <Link href="/" className="brand" aria-label="CasaPay tenant home">
+        <Link href="/tenant" className="brand" aria-label="CasaPay tenant home">
           <Image src="/media/brand/casapay-logo.png" alt="CasaPay" width={132} height={38} priority />
         </Link>
 
         <div className="audience-switch" aria-label="Choose audience">
-          <Link href="/" className={!partner ? "active" : undefined}>Tenant</Link>
+          <Link href="/tenant" className={!partner ? "active" : undefined}>Tenant</Link>
           <div className="audience-partner">
             <button
               type="button"
@@ -65,7 +65,6 @@ export function SiteHeader() {
               <nav id="partner-picker" className="floating-menu audience-menu" aria-label="Partner experiences" onClick={() => setPartnerOpen(false)}>
                 <Link href="/partner/operator">For operators</Link>
                 <Link href="/partner/platforms">For platforms</Link>
-                <Link href="/partner/marketplaces">For marketplaces</Link>
               </nav>
             )}
           </div>

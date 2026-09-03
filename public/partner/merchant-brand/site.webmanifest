@@ -1,0 +1,8 @@
+{
+  "name": "CasaPay for Operators",
+  "short_name": "CasaPay",
+  "start_url": "/partner/operator",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b8db8"
+}

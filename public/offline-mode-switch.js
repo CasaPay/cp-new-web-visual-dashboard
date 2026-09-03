@@ -1,10 +1,21 @@
 (() => {
   const setup = () => {
+    const switchRoot = document.querySelector('#offline-mode-switch');
+    const tenantLink = switchRoot?.querySelector('.offline-mode-switch__inner > a');
     const button = document.querySelector('#offline-mode-partner-button');
     const menu = document.querySelector('#offline-mode-partner-menu');
     if (!button || !menu || button.dataset.ready === 'true') return;
     button.dataset.ready = 'true';
     menu.inert = true;
+
+    const partnerActive = window.location.pathname === '/partner'
+      || window.location.pathname.startsWith('/partner/');
+    if (tenantLink) {
+      if (partnerActive) tenantLink.removeAttribute('aria-current');
+      else tenantLink.setAttribute('aria-current', 'page');
+    }
+    if (partnerActive) button.setAttribute('aria-current', 'page');
+    else button.removeAttribute('aria-current');
 
     const setOpen = open => {
       button.setAttribute('aria-expanded', String(open));

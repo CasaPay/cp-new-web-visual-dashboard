@@ -6,37 +6,33 @@ interface Env {
 }
 
 const pages: Record<string, string> = {
-  "/": "home.html",
-  "/offers": "offers.html",
-  "/tenant-protection": "tenant-protection.html",
-  "/en/est/tallinn": "city-tallinn.html",
-  "/en/gbr/london": "city-london.html",
-  "/rentlink": "rentlink.html",
+  "/tenant": "home.html",
+  "/tenant/offers": "offers.html",
+  "/tenant/tenant-protection": "tenant-protection.html",
+  "/tenant/en/est/tallinn": "city-tallinn.html",
+  "/tenant/en/gbr/london": "city-london.html",
   "/partner/operator": "partner-operator.html",
+  "/partner/operator/rentlink": "rentlink.html",
+  "/partner/operator/casapay-plus": "partner-burger--solution--casapay-plus.html",
+  "/partner/operator/capital": "partner-capital.html",
+  "/partner/operator/referrals": "partner-referrals.html",
   "/partner/platforms": "partner-platforms.html",
-  "/partner/marketplaces": "partner-marketplaces.html",
-  "/partner/capital": "partner-capital.html",
-  "/partner/referrals": "partner-referrals.html",
-  "/partner/en/est": "partner-burger--index.html",
-  "/partner/en/est/product/casapay-app": "partner-burger--product--casapay-app.html",
-  "/partner/en/est/rentlink": "partner-burger--rentlink.html",
-  "/partner/en/est/product/storefront": "partner-burger--product--storefront.html",
-  "/partner/en/est/solution/integrations": "partner-burger--solution--integrations.html",
-  "/partner/en/est/solution/analytics": "partner-burger--solution--analytics.html",
-  "/partner/en/est/operator-tools": "partner-burger--operator-tools.html",
-  "/partner/en/est/solution/promotions": "partner-burger--solution--promotions.html",
-  "/partner/en/est/solution/casapay-plus": "partner-burger--solution--casapay-plus.html",
-  "/partner/en/est/solution/capital": "partner-burger--solution--capital.html",
-  "/partner/en/est/business/restaurants": "partner-burger--business--restaurants.html",
-  "/partner/en/est/business/retailers": "partner-burger--business--retailers.html",
-  "/partner/en/est/business/pet-stores": "partner-burger--business--pet-stores.html",
-  "/partner/en/est/business/flower-shop": "partner-burger--business--flower-shop.html",
-  "/partner/en/est/business/convenience": "partner-burger--business--convenience.html",
-  "/partner/en/est/business/grocery": "partner-burger--business--grocery.html",
-  "/partner/en/est/business/alcohol": "partner-burger--business--alcohol.html",
-  "/partner/en/est/learning-center": "partner-burger--learning-center.html",
-  "/partner/en/est/blog": "partner-burger--blog.html",
-  "/partner/en/est/blog/success-story-home": "partner-burger--blog--success-story-home.html",
+  "/partner/operator/product/casapay-app": "partner-burger--product--casapay-app.html",
+  "/partner/operator/product/storefront": "partner-burger--product--storefront.html",
+  "/partner/operator/solution/integrations": "partner-burger--solution--integrations.html",
+  "/partner/operator/solution/analytics": "partner-burger--solution--analytics.html",
+  "/partner/operator/operator-tools": "partner-burger--operator-tools.html",
+  "/partner/operator/solution/promotions": "partner-burger--solution--promotions.html",
+  "/partner/operator/business/restaurants": "partner-burger--business--restaurants.html",
+  "/partner/operator/business/retailers": "partner-burger--business--retailers.html",
+  "/partner/operator/business/pet-stores": "partner-burger--business--pet-stores.html",
+  "/partner/operator/business/flower-shop": "partner-burger--business--flower-shop.html",
+  "/partner/operator/business/convenience": "partner-burger--business--convenience.html",
+  "/partner/operator/business/grocery": "partner-burger--business--grocery.html",
+  "/partner/operator/business/alcohol": "partner-burger--business--alcohol.html",
+  "/partner/operator/learning-center": "partner-burger--learning-center.html",
+  "/partner/operator/blog": "partner-burger--blog.html",
+  "/partner/operator/blog/success-story-home": "partner-burger--blog--success-story-home.html",
 };
 
 interface PageVariant {
@@ -47,17 +43,17 @@ interface PageVariant {
 }
 
 const pageVariants: Record<string, PageVariant> = {
-  "/casapay-plus": {
+  "/tenant/casapay-plus": {
     filename: "home.html",
     title: "CasaPay+ for tenants",
     stylesheet: "/tenant-plus.css?v=1",
     script: "/tenant-plus.js?v=1",
   },
-  "/partner/offers": {
+  "/partner/operator/offers": {
     filename: "partner-operator.html",
     title: "CasaPay Offers for rental operators",
-    stylesheet: "/partner-offers.css?v=1",
-    script: "/partner-offers.js?v=1",
+    stylesheet: "/partner-offers.css?v=2",
+    script: "/partner-offers.js?v=2",
   },
 };
 
@@ -87,8 +83,8 @@ function robots(releaseSha?: string): Response {
 
 function sitemap(releaseSha?: string): Response {
   const urls = [...Object.keys(pages), ...Object.keys(pageVariants)].map((path) => {
-    const location = path === "/" ? "https://casapay.app/" : `https://casapay.app${path}`;
-    const priority = path === "/" ? "1" : "0.8";
+    const location = `https://casapay.app${path}`;
+    const priority = path === "/tenant" ? "1" : "0.8";
     return `<url><loc>${location}</loc><changefreq>weekly</changefreq><priority>${priority}</priority></url>`;
   });
   const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.join("")}</urlset>\n`;
@@ -108,7 +104,7 @@ async function pageResponse(
   const asset = await env.ASSETS.fetch(assetRequest);
   if (!asset.ok || request.method === "HEAD") return addHeaders(asset, env.RELEASE_SHA);
 
-  const canonicalUrl = pathname === "/" ? "https://casapay.app/" : `https://casapay.app${pathname}`;
+  const canonicalUrl = `https://casapay.app${pathname}`;
   const releaseMeta = env.RELEASE_SHA ? `<meta name="x-casapay-release" content="${env.RELEASE_SHA}">` : "";
   let html = await asset.text();
   if (variant) {
@@ -141,8 +137,38 @@ const siteWorker = {
 
     if (pathname === "/robots.txt") return robots(env.RELEASE_SHA);
     if (pathname === "/sitemap.xml") return sitemap(env.RELEASE_SHA);
-    if (pathname === "/partner") return redirect(new URL(`/partner/operator${url.search}`, url).toString(), 308, env.RELEASE_SHA);
-    if (pathname === "/help") return redirect(new URL(`/${url.search}`, url).toString(), 307, env.RELEASE_SHA);
+    const exactRedirects: Record<string, string> = {
+      "/": "/tenant",
+      "/offers": "/tenant/offers",
+      "/tenant-protection": "/tenant/tenant-protection",
+      "/casapay-plus": "/tenant/casapay-plus",
+      "/en/discovery": "/tenant",
+      "/en/est": "/tenant",
+      "/en/est/tallinn": "/tenant/en/est/tallinn",
+      "/en/gbr/london": "/tenant/en/gbr/london",
+      "/rentlink": "/partner/operator/rentlink",
+      "/partner": "/partner/operator",
+      "/partner/offers": "/partner/operator/offers",
+      "/partner/capital": "/partner/operator/capital",
+      "/partner/referrals": "/partner/operator/referrals",
+      "/partner/marketplaces": "/partner/operator",
+      "/partner/en/est": "/partner/operator",
+      "/partner/en/est/rentlink": "/partner/operator/rentlink",
+      "/partner/en/est/solution/casapay-plus": "/partner/operator/casapay-plus",
+      "/partner/en/est/solution/capital": "/partner/operator/capital",
+      "/partner/operator/solution/casapay-plus": "/partner/operator/casapay-plus",
+      "/partner/operator/solution/capital": "/partner/operator/capital",
+    };
+    const exactDestination = exactRedirects[pathname];
+    if (exactDestination) return redirect(new URL(`${exactDestination}${url.search}`, url).toString(), 308, env.RELEASE_SHA);
+    if (pathname === "/help") return redirect(new URL(`/tenant${url.search}`, url).toString(), 307, env.RELEASE_SHA);
+    if (pathname.startsWith("/et/discovery/")) {
+      return redirect(new URL(`/tenant${url.search}`, url).toString(), 307, env.RELEASE_SHA);
+    }
+    if (pathname.startsWith("/partner/en/est/")) {
+      const suffix = pathname.slice("/partner/en/est/".length);
+      return redirect(new URL(`/partner/operator/${suffix}${url.search}`, url).toString(), 308, env.RELEASE_SHA);
+    }
 
     const filename = pages[pathname];
     if (filename) return pageResponse(request, env, pathname, filename);
@@ -151,9 +177,16 @@ const siteWorker = {
     if (variant) return pageResponse(request, env, pathname, variant.filename, variant);
 
     if (/^\/en\/[^/]+\/[^/]+$/.test(pathname)) {
-      return redirect(new URL(`/${url.search}`, url).toString(), 307, env.RELEASE_SHA);
+      return redirect(new URL(`/tenant${pathname}${url.search}`, url).toString(), 308, env.RELEASE_SHA);
     }
-    if (pathname.startsWith("/partner/en/est/") || pathname.startsWith("/site-pages/")) {
+    if (/^\/tenant\/en\/[^/]+\/[^/]+$/.test(pathname)) {
+      return redirect(new URL(`/tenant${url.search}`, url).toString(), 307, env.RELEASE_SHA);
+    }
+    const supportedCityChild = pathname.match(/^\/tenant\/(en\/(?:est\/tallinn|gbr\/london))\//);
+    if (supportedCityChild) {
+      return redirect(new URL(`/tenant/${supportedCityChild[1]}${url.search}`, url).toString(), 307, env.RELEASE_SHA);
+    }
+    if (pathname.startsWith("/site-pages/")) {
       return addHeaders(new Response("Not found", { status: 404 }), env.RELEASE_SHA);
     }
 

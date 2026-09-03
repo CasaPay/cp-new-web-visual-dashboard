@@ -7,11 +7,11 @@ export function GET() {
     .replace(/<title[^>]*>.*?<\/title>/i, "<title>CasaPay Offers for rental operators</title>")
     .replace(
       "</head>",
-      '<link rel="stylesheet" href="/partner-offers.css?v=1"></head>',
+      '<link rel="stylesheet" href="/partner-offers.css?v=2"></head>',
     )
     .replace(
       "</body>",
-      '<script defer src="/partner-offers.js?v=1"></script></body>',
+      '<script defer src="/partner-offers.js?v=2"></script></body>',
     );
 
   return new Response(html, {

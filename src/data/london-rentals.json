@@ -3,7 +3,7 @@
   "citySlug": "london",
   "country": "United Kingdom",
   "countryCode": "GB",
-  "route": "/en/gbr/london",
+  "route": "/tenant/en/gbr/london",
   "currencyCode": "GBP",
   "currencySymbol": "£",
   "minimumBuildingScale": 25,

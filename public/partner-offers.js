@@ -32,14 +32,14 @@
 
     <section class="operator-offers__section operator-offers__intro">
       <div class="operator-offers__section-heading">
-        <span class="operator-offers__eyebrow">A warmer route to demand</span>
-        <h2>Meet tenants inside the rental journey.</h2>
-        <p>CasaPay Offers helps operators become relevant before a member has chosen a home, not after the relationship has already started.</p>
+        <span class="operator-offers__eyebrow">Why CasaPay Offers?</span>
+        <h2>More occupancy. Still your relationship.</h2>
+        <p>Reach CasaPay members while they are actively choosing where to live, then bring them into the direct journey you already own.</p>
       </div>
       <div class="operator-offers__value-grid">
-        <article><span>01</span><h3>Show the right offer</h3><p>Publish eligible homes, incentives or move-in propositions with clear availability and terms.</p></article>
-        <article><span>02</span><h3>Reach the right moment</h3><p>Appear to participating members exploring a city, comparing homes or preparing to move.</p></article>
-        <article><span>03</span><h3>Receive chosen interest</h3><p>A member decides whether to enquire. The operator receives the introduction only after that choice.</p></article>
+        <article><span>01</span><h3>Boost occupancy without extra cost</h3><p>Put available homes in front of relevant tenant demand without adding another paid acquisition channel.</p></article>
+        <article><span>02</span><h3>Keep your own direct channel</h3><p>CasaPay introduces the tenant, then sends them to your website to choose, book and build a direct relationship with you.</p></article>
+        <article><span>03</span><h3>Convert high-intent demand</h3><p>Meet members at the moment they are comparing cities, homes and move-in options—not months before they are ready.</p></article>
       </div>
     </section>
 
@@ -49,6 +49,59 @@
         <h2>Our members are your tenants.</h2>
       </div>
       <p>CasaPay already supports people through rent payments and the moments around a move. Offers turns that trusted member relationship into an operator discovery channel—without turning personal data into a commodity.</p>
+    </section>
+
+    <section class="operator-offers__section operator-offers__requirements">
+      <div class="operator-offers__section-heading operator-offers__section-heading--left">
+        <span class="operator-offers__eyebrow">Operator requirements</span>
+        <h2>Built for professional rental operators.</h2>
+        <p>CasaPay Offers is designed for professionally managed buildings and a customer journey that can move from interest to action online.</p>
+      </div>
+      <div class="operator-offers__requirements-grid">
+        <article>
+          <span class="operator-offers__requirement-icon" aria-hidden="true">25+</span>
+          <div><h3>At least 25 units per building</h3><p>We are building for professional operators with managed inventory—not individual, single-unit landlords.</p></div>
+        </article>
+        <article>
+          <span class="operator-offers__requirement-icon" aria-hidden="true">↗</span>
+          <div><h3>An online customer journey</h3><p>Your website should let tenants explore availability and take the next step online. A hybrid online-and-human journey is also welcome.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="operator-offers__enablement">
+      <div class="operator-offers__enablement-copy">
+        <span class="operator-offers__eyebrow">Need the digital layer?</span>
+        <h2>Our integration partners can help.</h2>
+        <p>Don’t have an operator website or connected property stack yet? Explore specialists that can help create the tenant-facing journey or connect it to your PMS.</p>
+        <small>Illustrative partner directory for the prelive experience.</small>
+      </div>
+      <div class="operator-offers__partner-groups">
+        <section aria-labelledby="offers-web-partners">
+          <h3 id="offers-web-partners"><span>01</span> Websites &amp; booking</h3>
+          <ul><li><strong>LeaseCanvas</strong><small>Operator websites</small></li><li><strong>Homeflow Studio</strong><small>Availability and booking</small></li><li><strong>Stayfront</strong><small>Resident conversion</small></li></ul>
+        </section>
+        <section aria-labelledby="offers-pms-partners">
+          <h3 id="offers-pms-partners"><span>02</span> Property management</h3>
+          <ul><li><strong>UnitStack</strong><small>Rental PMS</small></li><li><strong>Keyline</strong><small>Inventory operations</small></li><li><strong>ResidentOS</strong><small>Resident lifecycle</small></li></ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="operator-offers__showcase">
+      <div class="operator-offers__showcase-media">
+        <div class="operator-offers__browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>pertonliving.ee</span></div>
+        <img src="/assets/how-it-works/perton-booking-page.jpg" alt="Perton Living online room search and booking journey" width="1600" height="1000">
+      </div>
+      <div class="operator-offers__showcase-copy">
+        <img class="operator-offers__showcase-logo" src="/assets/tallinn-rentals/logos/perton-living.svg" alt="Perton Living" width="220" height="72">
+        <span class="operator-offers__eyebrow">Direct journey showcase</span>
+        <h2>A move-in path designed to take five minutes.</h2>
+        <p>Perton Living shows what a modern operator journey can feel like: choose the city and dates, compare room types, book online and continue directly with the operator.</p>
+        <ol><li><span>1</span>Choose dates</li><li><span>2</span>Select a home</li><li><span>3</span>Book online</li></ol>
+        <a class="operator-offers__text-link" href="https://pertonliving.ee/en" target="_blank" rel="noopener">Explore Perton Living <span aria-hidden="true">↗</span></a>
+        <small>Journey time depends on the operator’s checks, availability and applicant details.</small>
+      </div>
     </section>
 
     <section class="operator-offers__section" id="how-it-works">

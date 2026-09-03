@@ -5,8 +5,8 @@ import { useEffect, useMemo, useState } from "react";
 
 const values = ["TRUSTED", "FLEXIBLE", "AFFORDABLE", "NO-DEPOSIT"];
 const locations = [
-  { name: "Tallinn", detail: "Estonia", href: "/en/est/tallinn", terms: "tallinn estonia taltech tallinn university" },
-  { name: "London", detail: "United Kingdom", href: "/en/gbr/london", terms: "london united kingdom kcl ucl imperial" },
+  { name: "Tallinn", detail: "Estonia", href: "/tenant/en/est/tallinn", terms: "tallinn estonia taltech tallinn university" },
+  { name: "London", detail: "United Kingdom", href: "/tenant/en/gbr/london", terms: "london united kingdom kcl ucl imperial" },
 ];
 
 export function HomeHero() {
@@ -61,8 +61,8 @@ export function HomeHero() {
             )}
           </div>
           <div className="hero-actions">
-            <Link href="/offers" className="button primary">Explore offers</Link>
-            <Link href="/tenant-protection" className="button secondary">How tenants are supported</Link>
+            <Link href="/tenant/offers" className="button primary">Explore offers</Link>
+            <Link href="/tenant/tenant-protection" className="button secondary">How tenants are supported</Link>
           </div>
         </div>
         <div className="hero-art" aria-hidden="true">

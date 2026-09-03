@@ -2,16 +2,16 @@
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
   const TENANT_PRODUCT_LINKS = Object.freeze([
-    Object.freeze(['CasaPay Offers', '/offers']),
-    Object.freeze(['Tenant Protect', '/tenant-protection']),
-    Object.freeze(['CasaPay+', '/casapay-plus']),
+    Object.freeze(['CasaPay Offers', '/tenant/offers']),
+    Object.freeze(['Tenant Protect', '/tenant/tenant-protection']),
+    Object.freeze(['CasaPay+', '/tenant/casapay-plus']),
   ]);
   const OPERATOR_PRODUCT_LINKS = Object.freeze([
-    Object.freeze(['CasaPay RentLink', '/rentlink']),
-    Object.freeze(['CasaPay Offers', '/partner/offers']),
-    Object.freeze(['CasaPay+', '/partner/en/est/solution/casapay-plus']),
-    Object.freeze(['CasaPay Capital', '/partner/capital']),
-    Object.freeze(['CasaPay Referrals', '/partner/referrals']),
+    Object.freeze(['CasaPay RentLink', '/partner/operator/rentlink']),
+    Object.freeze(['CasaPay Offers', '/partner/operator/offers']),
+    Object.freeze(['CasaPay+', '/partner/operator/casapay-plus']),
+    Object.freeze(['CasaPay Capital', '/partner/operator/capital']),
+    Object.freeze(['CasaPay Referrals', '/partner/operator/referrals']),
   ]);
   const OPERATOR_BURGER_LINKS = Object.freeze([
     ...OPERATOR_PRODUCT_LINKS.slice(0, 3),
@@ -20,7 +20,6 @@
   ]);
   const PARTNER_PRODUCT_LINKS = Object.freeze([
     Object.freeze(['For platforms', '/partner/platforms']),
-    Object.freeze(['For marketplaces', '/partner/marketplaces']),
   ]);
   const ACCOUNT_DESTINATIONS = Object.freeze({
     tenant: 'https://tnt.test.casapay.com/',
@@ -31,16 +30,41 @@
     android: 'https://play.google.com/store/apps/details?id=com.casapay.tnt',
   });
   const VALID_LOCAL_PATHS = new Set([
-    '/', '/en/est/tallinn', '/en/gbr/london', '/offers', '/tenant-protection', '/casapay-plus', '/rentlink',
-    '/partner', '/partner/operator', '/partner/offers', '/partner/platforms', '/partner/marketplaces', '/partner/capital', '/partner/referrals',
-    '/partner/en/est', '/partner/en/est/product/casapay-app', '/partner/en/est/rentlink', '/partner/en/est/product/storefront',
-    '/partner/en/est/solution/integrations', '/partner/en/est/solution/analytics', '/partner/en/est/operator-tools',
-    '/partner/en/est/solution/promotions', '/partner/en/est/solution/casapay-plus', '/partner/en/est/solution/capital',
-    '/partner/en/est/business/restaurants', '/partner/en/est/business/retailers', '/partner/en/est/business/pet-stores',
-    '/partner/en/est/business/flower-shop', '/partner/en/est/business/convenience', '/partner/en/est/business/grocery',
-    '/partner/en/est/business/alcohol', '/partner/en/est/learning-center', '/partner/en/est/blog',
-    '/partner/en/est/blog/success-story-home',
+    '/tenant', '/tenant/en/est/tallinn', '/tenant/en/gbr/london', '/tenant/offers', '/tenant/tenant-protection', '/tenant/casapay-plus',
+    '/partner/operator', '/partner/operator/rentlink', '/partner/operator/offers', '/partner/operator/casapay-plus',
+    '/partner/operator/capital', '/partner/operator/referrals', '/partner/platforms',
+    '/partner/operator/product/casapay-app', '/partner/operator/product/storefront',
+    '/partner/operator/solution/integrations', '/partner/operator/solution/analytics', '/partner/operator/operator-tools',
+    '/partner/operator/solution/promotions',
+    '/partner/operator/business/restaurants', '/partner/operator/business/retailers', '/partner/operator/business/pet-stores',
+    '/partner/operator/business/flower-shop', '/partner/operator/business/convenience', '/partner/operator/business/grocery',
+    '/partner/operator/business/alcohol', '/partner/operator/learning-center', '/partner/operator/blog',
+    '/partner/operator/blog/success-story-home',
   ]);
+  const CANONICAL_PATH_ALIASES = new Map([
+    ['/', '/tenant'],
+    ['/en/discovery', '/tenant'],
+    ['/en/est', '/tenant'],
+    ['/offers', '/tenant/offers'],
+    ['/tenant-protection', '/tenant/tenant-protection'],
+    ['/casapay-plus', '/tenant/casapay-plus'],
+    ['/en/est/tallinn', '/tenant/en/est/tallinn'],
+    ['/en/gbr/london', '/tenant/en/gbr/london'],
+    ['/rentlink', '/partner/operator/rentlink'],
+    ['/partner', '/partner/operator'],
+    ['/partner/offers', '/partner/operator/offers'],
+    ['/partner/capital', '/partner/operator/capital'],
+    ['/partner/referrals', '/partner/operator/referrals'],
+    ['/partner/en/est', '/partner/operator'],
+    ['/partner/en/est/rentlink', '/partner/operator/rentlink'],
+    ['/partner/en/est/solution/casapay-plus', '/partner/operator/casapay-plus'],
+    ['/partner/en/est/solution/capital', '/partner/operator/capital'],
+    ['/partner/operator/solution/casapay-plus', '/partner/operator/casapay-plus'],
+    ['/partner/operator/solution/capital', '/partner/operator/capital'],
+  ]);
+
+  const canonicalPathFor = path => CANONICAL_PATH_ALIASES.get(path)
+    || (path.startsWith('/partner/en/est/') ? `/partner/operator/${path.slice('/partner/en/est/'.length)}` : path);
 
   const productLinksMarkup = links => links
     .map(([label, href]) => `<a href="${href}"${href === '#offline-external' ? ` data-offline-external="${label}"` : ''}>${label}</a>`)
@@ -73,7 +97,7 @@
 
     const globalBrand = document.createElement('a');
     globalBrand.className = 'offline-tenant-brand';
-    globalBrand.href = '/';
+    globalBrand.href = '/tenant';
 
     const button = document.createElement('button');
     button.id = 'offline-consumer-nav-button';
@@ -83,15 +107,13 @@
     button.setAttribute('aria-expanded', 'false');
     button.innerHTML = '<span></span><span></span><span></span>';
 
-    const operatorExperience = window.location.pathname === '/rentlink'
-      || window.location.pathname === '/partner'
-      || window.location.pathname.startsWith('/partner/');
+    const operatorExperience = window.location.pathname.startsWith('/partner');
     const accountAudience = operatorExperience ? 'operator' : 'tenant';
     const accountDestination = ACCOUNT_DESTINATIONS[accountAudience];
     const accountLabel = operatorExperience ? 'Operator account actions' : 'Tenant account actions';
     const accountAudienceLabel = operatorExperience ? 'Operator' : 'Tenant';
     const oppositeAudienceLabel = operatorExperience ? 'Tenant' : 'Operator';
-    const oppositeAudienceHref = operatorExperience ? '/' : '/partner/operator';
+    const oppositeAudienceHref = operatorExperience ? '/tenant' : '/partner/operator';
 
     const authActions = document.createElement('div');
     authActions.id = 'offline-consumer-auth-actions';
@@ -146,7 +168,7 @@
     if (getComputedStyle(header).display === 'none' || header.getBoundingClientRect().height === 0) {
       const fallback = document.createElement('div');
       fallback.id = 'offline-consumer-fallback-header';
-      fallback.innerHTML = '<a href="/" aria-label="Tenant home">CasaPay</a>';
+      fallback.innerHTML = '<a href="/tenant" aria-label="Tenant home">CasaPay</a>';
       if (modeSwitch) fallback.append(modeSwitch);
       fallback.append(authActions, button, menu);
       document.body.prepend(fallback);
@@ -176,11 +198,11 @@
   const setupTenantBrand = () => {
     const header = $('#offline-consumer-fallback-header') || $('header.offline-consumer-header') || $('header');
     if (!header) return;
-    const brandLink = $('.offline-tenant-brand', header) || $('a[href="/en/discovery"], a[href="/"]', header);
+    const brandLink = $('.offline-tenant-brand', header) || $('a[href="/tenant"], a[href="/en/discovery"], a[href="/"]', header);
     if (!brandLink || brandLink.dataset.offlineTenantBrand === 'true') return;
     brandLink.dataset.offlineTenantBrand = 'true';
     brandLink.classList.add('offline-tenant-brand');
-    brandLink.href = '/';
+    brandLink.href = '/tenant';
     brandLink.setAttribute('aria-label', 'CasaPay tenant home');
     brandLink.title = 'CasaPay tenant home';
     const image = document.createElement('img');
@@ -416,7 +438,7 @@
     const renderGroup = (type, items, popular) => {
       if (!items.length) return '';
       const headingId = `offline-location-${type}-heading`;
-      const heading = `${popular ? 'Popular ' : ''}${type === 'city' ? 'cities' : 'universities'}`;
+      const heading = `${popular ? 'Popular ' : ''}${type === 'city' ? 'Cities' : 'Universities'}`;
       const icon = type === 'city' ? '/svgAssets/pin-medium-288915600a915412.svg' : '/svgAssets/school-material-outlined.svg';
       return `<section class="offline-location-group" role="group" aria-labelledby="${headingId}"><h2 id="${headingId}" class="offline-location-group__heading">${heading}</h2><div class="offline-location-group__options">${items.map((item, index) => `<button id="offline-location-option-${type}-${index}" class="offline-location-option" type="button" role="option" aria-selected="false" data-item="${encodeURIComponent(JSON.stringify(item))}"><img src="${icon}" alt="" aria-hidden="true"><span>${escapeHtml(labelFor(item))}</span></button>`).join('')}</div></section>`;
     };
@@ -544,7 +566,7 @@
         ...data,
         city,
         citySlug,
-        route: data.route || '/en/est/tallinn',
+        route: data.route || '/tenant/en/est/tallinn',
         currencyCode: data.currencyCode || 'EUR',
         currencySymbol: data.currencySymbol || '€',
         categoryAssetBase: data.categoryAssetBase || '/assets/tallinn-rentals/category-icons',
@@ -1192,7 +1214,7 @@
         const item = document.createElement('li');
         item.className = 'city-rental-category';
         item.style.setProperty('--city-rental-category-index', index);
-        item.innerHTML = `<a href="/offers?category=${slug}"><span aria-hidden="true"><img src="${escapeRentalText(rentalData.categoryAssetBase)}/${iconKey}.png" alt="" width="200" height="200" decoding="async" draggable="false"></span><strong>${label}</strong></a>`;
+        item.innerHTML = `<a href="/tenant/offers?category=${slug}"><span aria-hidden="true"><img src="${escapeRentalText(rentalData.categoryAssetBase)}/${iconKey}.png" alt="" width="200" height="200" decoding="async" draggable="false"></span><strong>${label}</strong></a>`;
         return item;
       }));
       const categoryFrame = categoryList.parentElement;
@@ -1310,8 +1332,8 @@
       let renderedOfferCount = 0;
       return buildings.map(building => {
         let prefix = '';
-        if (renderedOfferCount === 4) prefix = productCard('protection', '/tenant-protection', 'Eligible rental support', 'Tenant Protection', 'Understand the home, operator, payment and applicable protection before move-in.', '/assets/generated/tenant-protection/casapay-tenant-move-in.png');
-        if (renderedOfferCount === 9) prefix = productCard('plus', '/casapay-plus', 'More flexibility', 'CasaPay+ offer', 'Explore eligible no-deposit and tenant membership options.', '/assets/generated/platform-partner-photo/openai-gpt-image-2/audiences/crm-platform.png');
+        if (renderedOfferCount === 4) prefix = productCard('protection', '/tenant/tenant-protection', 'Eligible rental support', 'Tenant Protection', 'Understand the home, operator, payment and applicable protection before move-in.', '/assets/generated/tenant-protection/casapay-tenant-move-in.png');
+        if (renderedOfferCount === 9) prefix = productCard('plus', '/tenant/casapay-plus', 'More flexibility', 'CasaPay+ offer', 'Explore eligible no-deposit and tenant membership options.', '/assets/generated/platform-partner-photo/openai-gpt-image-2/audiences/crm-platform.png');
         renderedOfferCount += 1;
         return `${prefix}${offerCard(building)}`;
       }).join('');
@@ -1513,8 +1535,8 @@
     renderSelection({ updateUrl: false });
     getToKnow.className = 'city-rental-feed__editorial';
     const editorialCards = [
-      ['Renting guide', 'Before you rent', 'A clear place to start.', '/tenant-protection'],
-      ['CasaPay basics', 'Understand your payments', 'Simple guidance for everyday renting.', '/offers'],
+      ['Renting guide', 'Before you rent', 'A clear place to start.', '/tenant/tenant-protection'],
+      ['CasaPay basics', 'Understand your payments', 'Simple guidance for everyday renting.', '/tenant/offers'],
     ];
     getToKnow.innerHTML = `
       <div class="city-rental-editorial__header">
@@ -1704,7 +1726,12 @@
         throw new Error('Operator logo registry must contain 20 fictional brands');
       }
     } catch (error) {
-      console.warn('Keeping captured logo strip:', error.message);
+      console.warn('Removing captured logo strip because the CasaPay operator registry could not load:', error.message);
+      maxWidth.replaceChildren();
+      maxWidth.dataset.offlineMarqueeReady = 'failed';
+      maxWidth.closest('.wpt-ui-HeroIconScroller_ScrollerContainer_s14u0i8')?.classList.add('offline-logo-marquee-host', 'offline-logo-marquee-host--empty');
+      setupHowItWorks();
+      setupTenantProtectionPromo();
       return;
     }
 
@@ -1791,7 +1818,7 @@
         <h2 id="tenant-how-it-works-title">How it works</h2>
         <ol class="tenant-how-it-works__grid">
           <li class="tenant-how-it-works__card" style="--tenant-how-card-bg:#eef9fc">
-            <a class="tenant-how-it-works__link" href="/en/est/tallinn">
+            <a class="tenant-how-it-works__link" href="/tenant/en/est/tallinn">
               <figure class="tenant-how-it-works__media tenant-how-it-works__media--offers">
                 <img src="/assets/how-it-works/tallinn-offers-page.jpg" alt="CasaPay rental offers and map for Tallinn" width="1280" height="720" loading="lazy" decoding="async">
               </figure>
@@ -1813,7 +1840,7 @@
             </a>
           </li>
           <li class="tenant-how-it-works__card" style="--tenant-how-card-bg:#fff7df">
-            <a class="tenant-how-it-works__link" href="/casapay-plus">
+            <a class="tenant-how-it-works__link" href="/tenant/casapay-plus">
               <figure class="tenant-how-it-works__media tenant-how-it-works__media--move-in">
                 <img src="/assets/generated/tenant-protection/casapay-tenant-move-in.png" alt="Tenants settling into their new home" width="1536" height="1024" loading="lazy" decoding="async">
               </figure>
@@ -1844,7 +1871,7 @@
           <li><img src="/assets/icons/heroicons/check-circle.svg" alt="" aria-hidden="true" width="24" height="24"><div><strong>Quick support</strong><p>Rental and payment context stay connected so support can start with the information that matters.</p></div></li>
           <li><img src="/assets/icons/heroicons/check-circle.svg" alt="" aria-hidden="true" width="24" height="24"><div><strong>Move in with confidence</strong><p>Track the operator, amount, due date and payment status from RentLink to reconciliation.</p></div></li>
         </ul>
-        <a class="tenant-protection-promo__action" href="/tenant-protection">CasaPay for Tenants</a>
+        <a class="tenant-protection-promo__action" href="/tenant/tenant-protection">CasaPay for Tenants</a>
         <p class="tenant-protection-promo__boundary">Protection and no-deposit options are subject to availability, eligibility and applicable terms.</p>
       </div>
       <figure class="tenant-protection-promo__media">
@@ -1954,7 +1981,7 @@
   };
 
   const improveAccessibility = () => {
-    const logo = $('header a[href="/en/discovery"], header a[href="/"]');
+    const logo = $('header a[href="/tenant"], header a[href="/en/discovery"], header a[href="/"]');
     if (logo && !logo.getAttribute('aria-label')) logo.setAttribute('aria-label', 'Tenant home');
     $$('a.leaflet-control-zoom-in, a.leaflet-control-zoom-out').forEach(control => {
       control.removeAttribute('href');
@@ -1996,6 +2023,16 @@
     $$('[aria-hidden="true"]').forEach(node => {
       if (node.querySelector('a,button,input,[tabindex]')) node.inert = true;
     });
+  };
+
+  const removeTenantPlatformPromotion = () => {
+    const path = window.location.pathname.replace(/\/+$/, '') || '/';
+    if (path !== '/' && path !== '/tenant') return;
+
+    const platformHeading = $$('h1,h2,h3,h4').find(heading =>
+      heading.textContent.replace(/\s+/g, ' ').trim().toLowerCase() === 'embed rent payments in your platform'
+    );
+    platformHeading?.closest('section')?.remove();
   };
 
   const setupPlatformPartnerSurfaces = () => {
@@ -2088,13 +2125,11 @@
   };
 
   const removeBrokenLinks = () => {
-    const operatorExperience = window.location.pathname === '/rentlink'
-      || window.location.pathname === '/partner'
-      || window.location.pathname.startsWith('/partner/');
-    const plusDestination = operatorExperience ? '/partner/en/est/solution/casapay-plus' : '/casapay-plus';
+    const operatorExperience = window.location.pathname.startsWith('/partner');
+    const plusDestination = operatorExperience ? '/partner/operator/casapay-plus' : '/tenant/casapay-plus';
     const destinations = [
       [/free month of casapay\+|^casapay\+$/i, plusDestination],
-      [/tenant rent payments/i, '/offers'],
+      [/tenant rent payments/i, '/tenant/offers'],
     ];
 
     const removeLink = link => {
@@ -2133,15 +2168,16 @@
 
     $$('a[href^="/"]').forEach(link => {
       const url = new URL(link.getAttribute('href'), window.location.origin);
-      if (url.pathname === '/en/discovery' || url.pathname === '/en/est') {
-        link.href = '/';
-        return;
+      const canonicalPath = canonicalPathFor(url.pathname);
+      if (canonicalPath !== url.pathname) {
+        url.pathname = canonicalPath;
+        link.href = `${url.pathname}${url.search}${url.hash}`;
       }
-      if (!VALID_LOCAL_PATHS.has(url.pathname)) removeLink(link);
+      if (!VALID_LOCAL_PATHS.has(canonicalPath)) removeLink(link);
     });
   };
 
-  const setup = () => {
+  const setup = async () => {
     setupConsumerNavigation();
     setupTenantBrand();
     setupTenantFooterBrand();
@@ -2151,9 +2187,10 @@
     setupDiscoveryCategoryStrip();
     setupCityRentals();
     setupTenantHeroNarrative();
-    setupHeroLogoMarquee();
+    await setupHeroLogoMarquee();
     setupCityExplorer();
     setupFooterControls();
+    removeTenantPlatformPromotion();
     setupPlatformPartnerSurfaces();
     setupOperatorSurfaces();
     setupCasaPayPlusSurface();
