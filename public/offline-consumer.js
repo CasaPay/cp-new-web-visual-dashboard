@@ -390,7 +390,7 @@
     const showPilotSignup = (label, cityLabel = label) => {
       const safeLabel = escapeHtml(label);
       const safeCityLabel = escapeHtml(cityLabel);
-      status.innerHTML = `<section class="offline-pilot-card" aria-label="${safeLabel} pilot access"><p class="offline-pilot-card__message" role="status"><strong>${safeLabel} is in pilot mode.</strong> Want to join our pilot program for early access? Enter your email.</p><form class="offline-pilot-card__form" novalidate><input class="offline-pilot-card__input" type="email" inputmode="email" autocomplete="email" aria-label="Email address for ${safeLabel} pilot access" placeholder="Email address" required><button class="offline-pilot-card__button" type="submit">Join pilot</button></form><p class="offline-pilot-card__feedback" role="status" aria-live="polite"></p></section>`;
+      status.innerHTML = `<section class="offline-pilot-card" aria-label="${safeLabel} pilot access"><p class="offline-pilot-card__message" role="status"><strong>${safeCityLabel} is in pilot mode.</strong> Want to join our pilot program for early access? Enter your email.</p><form class="offline-pilot-card__form" novalidate><input class="offline-pilot-card__input" type="email" inputmode="email" autocomplete="email" aria-label="Email address for ${safeLabel} pilot access" placeholder="Email address" required><button class="offline-pilot-card__button" type="submit">Join pilot</button></form><p class="offline-pilot-card__feedback" role="status" aria-live="polite"></p></section>`;
       const form = $('.offline-pilot-card__form', status);
       const email = $('.offline-pilot-card__input', status);
       const feedback = $('.offline-pilot-card__feedback', status);
