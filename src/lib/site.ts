@@ -61,7 +61,7 @@ export const cityData: Record<string, CityData> = {
 export const tenantLinks = [
   ["CasaPay Offers", "/offers"],
   ["Tenant Protect", "/tenant-protection"],
-  ["CasaPay+", "/partner/en/est/solution/casapay-plus"],
+  ["CasaPay+", "/casapay-plus"],
 ] as const;
 
 export const operatorLinks = [

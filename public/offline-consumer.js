@@ -4,7 +4,7 @@
   const TENANT_PRODUCT_LINKS = Object.freeze([
     Object.freeze(['CasaPay Offers', '/offers']),
     Object.freeze(['Tenant Protect', '/tenant-protection']),
-    Object.freeze(['CasaPay+', '/partner/en/est/solution/casapay-plus']),
+    Object.freeze(['CasaPay+', '/casapay-plus']),
   ]);
   const OPERATOR_PRODUCT_LINKS = Object.freeze([
     Object.freeze(['CasaPay RentLink', '/rentlink']),
@@ -26,7 +26,7 @@
     android: 'https://play.google.com/store/apps/details?id=com.casapay.tnt',
   });
   const VALID_LOCAL_PATHS = new Set([
-    '/', '/en/est/tallinn', '/en/gbr/london', '/offers', '/tenant-protection', '/rentlink',
+    '/', '/en/est/tallinn', '/en/gbr/london', '/offers', '/tenant-protection', '/casapay-plus', '/rentlink',
     '/partner', '/partner/operator', '/partner/offers', '/partner/platforms', '/partner/marketplaces', '/partner/capital', '/partner/referrals',
     '/partner/en/est', '/partner/en/est/product/casapay-app', '/partner/en/est/rentlink', '/partner/en/est/product/storefront',
     '/partner/en/est/solution/integrations', '/partner/en/est/solution/analytics', '/partner/en/est/operator-tools',
@@ -1299,7 +1299,7 @@
       return buildings.map(building => {
         let prefix = '';
         if (renderedOfferCount === 4) prefix = productCard('protection', '/tenant-protection', 'Eligible rental support', 'Tenant Protection', 'Understand the home, operator, payment and applicable protection before move-in.', '/assets/generated/tenant-protection/casapay-tenant-move-in.png');
-        if (renderedOfferCount === 9) prefix = productCard('plus', '/partner/en/est/solution/casapay-plus', 'More flexibility', 'CasaPay+ offer', 'Explore eligible no-deposit and tenant membership options.', '/assets/generated/platform-partner-photo/openai-gpt-image-2/audiences/crm-platform.png');
+        if (renderedOfferCount === 9) prefix = productCard('plus', '/casapay-plus', 'More flexibility', 'CasaPay+ offer', 'Explore eligible no-deposit and tenant membership options.', '/assets/generated/platform-partner-photo/openai-gpt-image-2/audiences/crm-platform.png');
         renderedOfferCount += 1;
         return `${prefix}${offerCard(building)}`;
       }).join('');
@@ -2025,8 +2025,12 @@
   };
 
   const removeBrokenLinks = () => {
+    const operatorExperience = window.location.pathname === '/rentlink'
+      || window.location.pathname === '/partner'
+      || window.location.pathname.startsWith('/partner/');
+    const plusDestination = operatorExperience ? '/partner/en/est/solution/casapay-plus' : '/casapay-plus';
     const destinations = [
-      [/free month of casapay\+|^casapay\+$/i, '/partner/en/est/solution/casapay-plus'],
+      [/free month of casapay\+|^casapay\+$/i, plusDestination],
       [/tenant rent payments/i, '/offers'],
     ];
 

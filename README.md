@@ -9,9 +9,10 @@ The repository contains the approved CasaPay pages, interactions, global header 
 - Tenant homepage, Tallinn and London city pages
 - City search limited to Tallinn, London, TalTech, and University College London
 - Unsupported legacy city URLs redirect to the homepage
-- Tenant Offers and Tenant Protection pages
+- Tenant Offers, Tenant Protection, and CasaPay+ pages
 - Partner Operator, Platforms, Marketplaces, Capital, Referrals, and RentLink pages
 - CasaPay Offers operator acquisition landing page
+- Separate tenant and operator CasaPay+ experiences with audience-correct navigation
 - All 20 `/partner/en/est` partner navigation destinations
 - Only links with live local destinations are rendered
 

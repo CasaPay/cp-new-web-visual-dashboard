@@ -4,6 +4,7 @@ const routes = [
   "",
   "/offers",
   "/tenant-protection",
+  "/casapay-plus",
   "/en/est/tallinn",
   "/en/gbr/london",
   "/rentlink",
