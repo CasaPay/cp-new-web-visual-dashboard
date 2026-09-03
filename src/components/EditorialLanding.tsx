@@ -57,7 +57,7 @@ export function EditorialLanding(props: EditorialLandingProps) {
           <span className="eyebrow">Connected rental context</span>
           <h2>{props.storyTitle}</h2>
           <p className="lede">{props.storyBody}</p>
-          <Link href="/help" className="button secondary" style={{ alignSelf: "flex-start", marginTop: 16 }}>Talk to support</Link>
+          <Link href="/partner/operator" className="button secondary" style={{ alignSelf: "flex-start", marginTop: 16 }}>Explore operator solutions</Link>
         </div>
       </section>
       <section className="shell section">

@@ -4,7 +4,6 @@ const routes = [
   "",
   "/offers",
   "/tenant-protection",
-  "/help",
   "/en/est/tallinn",
   "/en/gbr/london",
   "/rentlink",

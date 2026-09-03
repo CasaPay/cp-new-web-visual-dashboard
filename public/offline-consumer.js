@@ -4,19 +4,17 @@
   const TENANT_PRODUCT_LINKS = Object.freeze([
     Object.freeze(['CasaPay Offers', '/offers']),
     Object.freeze(['Tenant Protect', '/tenant-protection']),
-    Object.freeze(['CasaPay+', '#offline-external']),
-    Object.freeze(['Support', '/help']),
+    Object.freeze(['CasaPay+', '/partner/en/est/solution/casapay-plus']),
   ]);
   const OPERATOR_PRODUCT_LINKS = Object.freeze([
     Object.freeze(['CasaPay RentLink', '/rentlink']),
-    Object.freeze(['CasaPay+', '#offline-external']),
+    Object.freeze(['CasaPay+', '/partner/en/est/solution/casapay-plus']),
     Object.freeze(['CasaPay Capital', '/partner/capital']),
     Object.freeze(['CasaPay Referrals', '/partner/referrals']),
-    Object.freeze(['Support', '/help']),
   ]);
   const PARTNER_PRODUCT_LINKS = Object.freeze([
     Object.freeze(['For platforms', '/partner/platforms']),
-    Object.freeze(['For marketplaces', '#offline-external']),
+    Object.freeze(['For marketplaces', '/partner/marketplaces']),
   ]);
   const ACCOUNT_DESTINATIONS = Object.freeze({
     tenant: 'https://tnt.test.casapay.com/',
@@ -26,6 +24,17 @@
     ios: 'https://apps.apple.com/app/casapay/id6756551004',
     android: 'https://play.google.com/store/apps/details?id=com.casapay.tnt',
   });
+  const VALID_LOCAL_PATHS = new Set([
+    '/', '/en/est/tallinn', '/en/gbr/london', '/offers', '/tenant-protection', '/rentlink',
+    '/partner', '/partner/operator', '/partner/platforms', '/partner/marketplaces', '/partner/capital', '/partner/referrals',
+    '/partner/en/est', '/partner/en/est/product/casapay-app', '/partner/en/est/rentlink', '/partner/en/est/product/storefront',
+    '/partner/en/est/solution/integrations', '/partner/en/est/solution/analytics', '/partner/en/est/operator-tools',
+    '/partner/en/est/solution/promotions', '/partner/en/est/solution/casapay-plus', '/partner/en/est/solution/capital',
+    '/partner/en/est/business/restaurants', '/partner/en/est/business/retailers', '/partner/en/est/business/pet-stores',
+    '/partner/en/est/business/flower-shop', '/partner/en/est/business/convenience', '/partner/en/est/business/grocery',
+    '/partner/en/est/business/alcohol', '/partner/en/est/learning-center', '/partner/en/est/blog',
+    '/partner/en/est/blog/success-story-home',
+  ]);
 
   const productLinksMarkup = links => links
     .map(([label, href]) => `<a href="${href}"${href === '#offline-external' ? ` data-offline-external="${label}"` : ''}>${label}</a>`)
@@ -234,30 +243,9 @@
         title: 'Partner with CasaPay',
         links: PARTNER_PRODUCT_LINKS,
       },
-      {
-        title: 'Company',
-        links: [
-          ['About us', '#offline-external'],
-          ['What we stand for', '#offline-external'],
-          ['Jobs', '#offline-external'],
-          ['Community Standards', '#offline-external'],
-          ['Contact', '#offline-external'],
-          ['Developers', '#offline-external'],
-        ],
-      },
-      {
-        title: 'Follow us',
-        links: [
-          ['Blog', '#offline-external'],
-          ['Instagram', '#offline-external'],
-          ['Facebook', '#offline-external'],
-          ['X', '#offline-external'],
-          ['LinkedIn', '#offline-external'],
-          ['CasaPay Life', '#offline-external'],
-          ['YouTube', '#offline-external'],
-        ],
-      },
     ];
+
+    columns.slice(groups.length).forEach(column => column.remove());
 
     groups.forEach((group, index) => {
       const column = columns[index];
@@ -1310,7 +1298,7 @@
       return buildings.map(building => {
         let prefix = '';
         if (renderedOfferCount === 4) prefix = productCard('protection', '/tenant-protection', 'Eligible rental support', 'Tenant Protection', 'Understand the home, operator, payment and applicable protection before move-in.', '/assets/generated/tenant-protection/casapay-tenant-move-in.png');
-        if (renderedOfferCount === 9) prefix = productCard('plus', '#offline-external', 'More flexibility', 'CasaPay+ offer', 'Explore eligible no-deposit and tenant membership options.', '/assets/generated/platform-partner-photo/openai-gpt-image-2/audiences/crm-platform.png', true);
+        if (renderedOfferCount === 9) prefix = productCard('plus', '/partner/en/est/solution/casapay-plus', 'More flexibility', 'CasaPay+ offer', 'Explore eligible no-deposit and tenant membership options.', '/assets/generated/platform-partner-photo/openai-gpt-image-2/audiences/crm-platform.png');
         renderedOfferCount += 1;
         return `${prefix}${offerCard(building)}`;
       }).join('');
@@ -1513,8 +1501,6 @@
     getToKnow.className = 'city-rental-feed__editorial';
     const editorialCards = [
       ['Renting guide', 'Before you rent', 'A clear place to start.', '/tenant-protection'],
-      ['Moving checklist', 'Ready for move-in', 'Keep the essentials together.', '/help'],
-      ['Tenant support', 'Help when you need it', 'Find practical answers quickly.', '/help'],
       ['CasaPay basics', 'Understand your payments', 'Simple guidance for everyday renting.', '/offers'],
     ];
     getToKnow.innerHTML = `
@@ -1906,6 +1892,16 @@
   const improveAccessibility = () => {
     const logo = $('header a[href="/en/discovery"], header a[href="/"]');
     if (logo && !logo.getAttribute('aria-label')) logo.setAttribute('aria-label', 'Tenant home');
+    $$('a.leaflet-control-zoom-in, a.leaflet-control-zoom-out').forEach(control => {
+      control.removeAttribute('href');
+      control.setAttribute('role', 'button');
+      control.tabIndex = 0;
+      control.addEventListener('keydown', event => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        control.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+      });
+    });
     $$('a').forEach(link => {
       if (!link.getAttribute('aria-label') && !link.textContent.trim() && link.querySelector('svg')) {
         const title = link.getAttribute('title');
@@ -2027,6 +2023,56 @@
     });
   };
 
+  const removeBrokenLinks = () => {
+    const destinations = [
+      [/free month of casapay\+|^casapay\+$/i, '/partner/en/est/solution/casapay-plus'],
+      [/tenant rent payments/i, '/offers'],
+    ];
+
+    const removeLink = link => {
+      const listItem = link.closest('li');
+      if (listItem) {
+        listItem.remove();
+        return;
+      }
+
+      const replacement = document.createElement('span');
+      replacement.className = link.className;
+      replacement.append(...link.childNodes);
+      link.replaceWith(replacement);
+    };
+
+    $$('a[data-disabled-link], a[href="#offline-external"], a[href="#offline-coming-soon"]').forEach(link => {
+      const currentHref = link.getAttribute('href');
+      if (currentHref && !currentHref.startsWith('#offline-')) {
+        link.removeAttribute('data-disabled-link');
+        return;
+      }
+
+      const label = link.textContent.replace(/\s+/g, ' ').trim();
+      const destination = destinations.find(([pattern]) => pattern.test(label))?.[1];
+      if (destination) {
+        link.href = destination;
+        link.removeAttribute('data-disabled-link');
+        link.removeAttribute('data-offline-external');
+        link.removeAttribute('target');
+        link.removeAttribute('rel');
+        return;
+      }
+
+      removeLink(link);
+    });
+
+    $$('a[href^="/"]').forEach(link => {
+      const url = new URL(link.getAttribute('href'), window.location.origin);
+      if (url.pathname === '/en/discovery' || url.pathname === '/en/est') {
+        link.href = '/';
+        return;
+      }
+      if (!VALID_LOCAL_PATHS.has(url.pathname)) removeLink(link);
+    });
+  };
+
   const setup = () => {
     setupConsumerNavigation();
     setupTenantBrand();
@@ -2044,6 +2090,7 @@
     setupOperatorSurfaces();
     setupCasaPayPlusSurface();
     adaptHomepageCards();
+    removeBrokenLinks();
     improveAccessibility();
     requestAnimationFrame(() => requestAnimationFrame(() => {
       $('#offline-boot-shell')?.remove();
