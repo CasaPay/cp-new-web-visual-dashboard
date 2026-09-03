@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cp-web-v2-www-redirect",
+  "main": "workers/www-redirect.ts",
+  "compatibility_date": "2026-09-03",
+  "workers_dev": false,
+  "observability": {
+    "enabled": true
+  },
+  "routes": [
+    { "pattern": "www.casapay.app", "custom_domain": true }
+  ]
+}

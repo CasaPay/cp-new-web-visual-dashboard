@@ -43,6 +43,8 @@ npm run check
 
 ## Production
 
-The application builds with the standard Next.js production workflow and can be deployed to a Node-compatible Next.js host. The canonical site URL is `https://casapay.com`; update the metadata, sitemap, and robots host together if the production domain changes.
+The production site is deployed to Cloudflare Workers at `https://casapay.app`; `https://www.casapay.app` permanently redirects to the apex. The separate legacy `casapay.com` deployment is not managed by this repository.
+
+Validate the Cloudflare Workers with `npm run check:cloudflare`, preview the site Worker with `npm run preview:cloudflare`, and deploy both the apex and `www` redirect Workers with `npm run deploy:production`.
 
 Forms currently validate locally and intentionally transmit or persist nothing. Connect approved production form endpoints before enabling submissions.

@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cp-web-v2",
+  "main": "workers/site.ts",
+  "compatibility_date": "2026-09-03",
+  "assets": {
+    "directory": "public",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "none"
+  },
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": {
+    "enabled": true
+  },
+  "routes": [
+    { "pattern": "casapay.app", "custom_domain": true }
+  ]
+}

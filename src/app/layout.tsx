@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://casapay.com"),
+  metadataBase: new URL("https://casapay.app"),
   title: { default: "CasaPay — Renting, made clearer", template: "%s — CasaPay" },
   description: "Connected rent payments and rental experiences for tenants, operators and platforms.",
   icons: { icon: "/media/brand/casapay-favicon-64.png", apple: "/media/brand/casapay-touch-icon-180.png" },

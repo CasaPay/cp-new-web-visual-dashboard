@@ -9,7 +9,13 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "check:brand": "node scripts/check-brand-cleanliness.mjs",
-    "check": "npm run check:brand && npm run typecheck && npm run lint && npm run build"
+    "check": "npm run check:brand && npm run typecheck && npm run lint && npm run build",
+    "check:cloudflare": "wrangler deploy --dry-run --config wrangler.jsonc && wrangler deploy --dry-run --config wrangler.www.jsonc",
+    "preview:cloudflare": "wrangler dev --config wrangler.jsonc",
+    "deploy:cloudflare": "wrangler deploy --config wrangler.jsonc --var RELEASE_SHA:$(git rev-parse HEAD)",
+    "preview:www": "wrangler dev --config wrangler.www.jsonc",
+    "deploy:www": "wrangler deploy --config wrangler.www.jsonc",
+    "deploy:production": "npm run deploy:cloudflare && npm run deploy:www"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
@@ -24,6 +30,7 @@
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.1",
     "eslint-config-next": "16.3.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "4.128.0"
   }
 }

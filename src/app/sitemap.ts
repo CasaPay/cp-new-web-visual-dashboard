@@ -37,5 +37,5 @@ const routes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({ url: `https://casapay.com${route}`, changeFrequency: "weekly", priority: route === "" ? 1 : .8 }));
+  return routes.map((route) => ({ url: `https://casapay.app${route}`, changeFrequency: "weekly", priority: route === "" ? 1 : .8 }));
 }
