@@ -1775,7 +1775,57 @@
     const root = maxWidth.closest('.wpt-ui-HeroIconScroller_Root_rjmtlw1');
     $('.wpt-ui-HeroIconScroller_UnderScroller_u1sbbp6m', root || document)?.remove();
     marquee.dataset.paused = String(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    setupHowItWorks();
     setupTenantProtectionPromo();
+  };
+
+  const setupHowItWorks = () => {
+    if ($('.tenant-how-it-works')) return;
+    const marqueeHost = $('.offline-logo-marquee-host');
+    if (!marqueeHost) return;
+    const section = document.createElement('section');
+    section.className = 'tenant-how-it-works';
+    section.setAttribute('aria-labelledby', 'tenant-how-it-works-title');
+    section.innerHTML = `
+      <div class="tenant-how-it-works__inner">
+        <h2 id="tenant-how-it-works-title">How it works</h2>
+        <ol class="tenant-how-it-works__grid">
+          <li class="tenant-how-it-works__card" style="--tenant-how-card-bg:#eef9fc">
+            <a class="tenant-how-it-works__link" href="/en/est/tallinn">
+              <figure class="tenant-how-it-works__media tenant-how-it-works__media--offers">
+                <img src="/assets/how-it-works/tallinn-offers-page.jpg" alt="CasaPay rental offers and map for Tallinn" width="1280" height="720" loading="lazy" decoding="async">
+              </figure>
+              <span class="tenant-how-it-works__number" aria-hidden="true">1</span>
+              <h3>Check verified partner offers</h3>
+              <p>Browse homes from CasaPay partners and compare options that fit your city and needs.</p>
+              <span class="tenant-how-it-works__action">Explore Tallinn offers</span>
+            </a>
+          </li>
+          <li class="tenant-how-it-works__card" style="--tenant-how-card-bg:#f8f2fa">
+            <a class="tenant-how-it-works__link" href="https://pertonliving.ee/en/" target="_blank" rel="noopener">
+              <figure class="tenant-how-it-works__media tenant-how-it-works__media--partner">
+                <img src="/assets/how-it-works/perton-booking-page.jpg" alt="A CasaPay partner page for choosing a home and rental dates" width="1280" height="720" loading="lazy" decoding="async">
+              </figure>
+              <span class="tenant-how-it-works__number" aria-hidden="true">2</span>
+              <h3>Choose your home on the partner site</h3>
+              <p>Select what you want to rent and when you want to move in, directly with the operator.</p>
+              <span class="tenant-how-it-works__action">See a partner experience</span>
+            </a>
+          </li>
+          <li class="tenant-how-it-works__card" style="--tenant-how-card-bg:#fff7df">
+            <a class="tenant-how-it-works__link" href="/casapay-plus">
+              <figure class="tenant-how-it-works__media tenant-how-it-works__media--move-in">
+                <img src="/assets/generated/tenant-protection/casapay-tenant-move-in.png" alt="Tenants settling into their new home" width="1536" height="1024" loading="lazy" decoding="async">
+              </figure>
+              <span class="tenant-how-it-works__number" aria-hidden="true">3</span>
+              <h3>Pay with CasaPay in seconds</h3>
+              <p>Complete your payment and opt in to CasaPay+ where available to reduce eligible move-in costs.</p>
+              <span class="tenant-how-it-works__action">Discover CasaPay+</span>
+            </a>
+          </li>
+        </ol>
+      </div>`;
+    marqueeHost.insertAdjacentElement('afterend', section);
   };
 
   const setupTenantProtectionPromo = () => {
@@ -1800,7 +1850,8 @@
       <figure class="tenant-protection-promo__media">
         <img src="/assets/generated/tenant-protection/casapay-tenant-move-in.png" alt="Two tenants unpacking together in a bright new apartment" width="1536" height="1024" loading="lazy" decoding="async">
       </figure>`;
-    marqueeHost.insertAdjacentElement('afterend', section);
+    const howItWorks = $('.tenant-how-it-works');
+    (howItWorks || marqueeHost).insertAdjacentElement('afterend', section);
   };
 
   const setupFooterControls = () => {
