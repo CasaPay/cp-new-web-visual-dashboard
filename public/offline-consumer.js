@@ -13,6 +13,11 @@
     Object.freeze(['CasaPay Capital', '/partner/capital']),
     Object.freeze(['CasaPay Referrals', '/partner/referrals']),
   ]);
+  const OPERATOR_BURGER_LINKS = Object.freeze([
+    ...OPERATOR_PRODUCT_LINKS.slice(0, 3),
+    OPERATOR_PRODUCT_LINKS[4],
+    OPERATOR_PRODUCT_LINKS[3],
+  ]);
   const PARTNER_PRODUCT_LINKS = Object.freeze([
     Object.freeze(['For platforms', '/partner/platforms']),
     Object.freeze(['For marketplaces', '/partner/marketplaces']),
@@ -98,7 +103,7 @@
 
     const menuGroups = operatorExperience
       ? [
-        { id: 'operator-products', label: 'For operators', labelHref: '/partner/operator', links: OPERATOR_PRODUCT_LINKS },
+        { id: 'operator-products', label: 'For operators', labelHref: '/partner/operator', links: OPERATOR_BURGER_LINKS },
         { id: 'partner-products', label: 'Partner with CasaPay', links: PARTNER_PRODUCT_LINKS },
       ]
       : [{ id: 'tenant-products', label: 'For tenants', links: TENANT_PRODUCT_LINKS }];
