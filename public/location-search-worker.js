@@ -51,7 +51,11 @@ const score = (item, query) => {
 };
 
 const publicItem = item => {
-  const { _name, _label, _aliases, population, ...result } = item;
+  const result = { ...item };
+  delete result._name;
+  delete result._label;
+  delete result._aliases;
+  delete result.population;
   return result;
 };
 

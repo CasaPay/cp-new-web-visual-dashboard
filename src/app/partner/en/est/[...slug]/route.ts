@@ -1,14 +1,14 @@
-import { preliveResponse } from "@/lib/prelive-page";
+import { siteResponse } from "@/lib/site-page";
 
 const pages: Record<string, string> = {
-  "product/wolt-app": "partner-burger--product--wolt-app.html",
-  "wolt-drive": "partner-burger--wolt-drive.html",
+  "product/casapay-app": "partner-burger--product--casapay-app.html",
+  "rentlink": "partner-burger--rentlink.html",
   "product/storefront": "partner-burger--product--storefront.html",
   "solution/integrations": "partner-burger--solution--integrations.html",
   "solution/analytics": "partner-burger--solution--analytics.html",
-  "wolt-ads": "partner-burger--wolt-ads.html",
+  "operator-tools": "partner-burger--operator-tools.html",
   "solution/promotions": "partner-burger--solution--promotions.html",
-  "solution/wolt-plus": "partner-burger--solution--wolt-plus.html",
+  "solution/casapay-plus": "partner-burger--solution--casapay-plus.html",
   "solution/capital": "partner-burger--solution--capital.html",
   "business/restaurants": "partner-burger--business--restaurants.html",
   "business/retailers": "partner-burger--business--retailers.html",
@@ -35,5 +35,5 @@ export async function GET(
     return new Response("Not found", { status: 404 });
   }
 
-  return preliveResponse(filename);
+  return siteResponse(filename);
 }

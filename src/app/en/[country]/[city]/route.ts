@@ -1,7 +1,7 @@
-import { preliveInactiveCityResponse } from "@/lib/prelive-page";
+import { inactiveCityResponse } from "@/lib/site-page";
 
 export const dynamic = "force-dynamic";
 
 export function GET(request: Request) {
-  return preliveInactiveCityResponse(new URL(request.url).pathname);
+  return inactiveCityResponse(new URL(request.url).pathname);
 }

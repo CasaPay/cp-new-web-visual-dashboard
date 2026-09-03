@@ -1,7 +1,7 @@
-import { preliveResponse } from "@/lib/prelive-page";
+import { siteResponse } from "@/lib/site-page";
 
 export const dynamic = "force-static";
 
 export function GET() {
-  return preliveResponse("partner-capital.html");
+  return siteResponse("partner-capital.html");
 }

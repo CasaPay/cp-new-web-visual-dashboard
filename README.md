@@ -1,8 +1,8 @@
-# codex-cp-web-v2
+# CasaPay Web V2
 
-CasaPay's tenant and partner website rebuilt in Next.js from the approved `prelive` prototype contracts.
+CasaPay's production tenant and partner website, built with Next.js App Router.
 
-The complete approved scope is preserved from `prelive`, including the original markup, styles, scripts, media, interactions, global header, and global footer. Next.js App Router route handlers serve the source-faithful pages directly.
+The repository contains the approved CasaPay pages, interactions, global header and footer, city rental data, fonts, and locally hosted media required by the supported routes.
 
 ## Included routes
 
@@ -27,10 +27,17 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run typecheck
 npm run lint
 npm run build
+npm run check:brand
 ```
 
-The project is private and contains only the selected CasaPay content, datasets, fonts, and local media required by the supported routes. Forms validate locally and intentionally transmit or persist nothing.
+Run the complete production check with:
 
-For local visual QA, [http://localhost:3000/homepage-comparison.html](http://localhost:3000/homepage-comparison.html) places the original `prelive` route and the Next.js version side by side. Pass a route with `?path=/en/est/tallinn`; add `&mobile=1` for the fixed mobile comparison. It expects the temporary source reference server on port `4175`.
+```bash
+npm run check
+```
 
-Source baseline: `ristok33/web-proto-wolt` branch `prelive`, commit `1eb0ae7d05358ba95c1be1209622143dbefe5374`.
+## Production
+
+The application builds with the standard Next.js production workflow and can be deployed to a Node-compatible Next.js host. The canonical site URL is `https://casapay.com`; update the metadata, sitemap, and robots host together if the production domain changes.
+
+Forms currently validate locally and intentionally transmit or persist nothing. Connect approved production form endpoints before enabling submissions.

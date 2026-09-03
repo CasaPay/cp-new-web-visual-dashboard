@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:brand": "node scripts/check-brand-cleanliness.mjs",
+    "check": "npm run check:brand && npm run typecheck && npm run lint && npm run build"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

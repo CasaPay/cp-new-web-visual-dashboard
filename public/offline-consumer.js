@@ -173,7 +173,7 @@
   const setupTenantFooterBrand = () => {
     const footer = $('footer');
     if (!footer || $('.offline-tenant-footer-brand', footer)) return;
-    const inheritedLogo = $('svg[aria-label="Wolt"], svg.wpt-ui-Footer_StyledLogo_s1117u18', footer);
+    const inheritedLogo = $('svg[aria-label="CasaPay"], svg.wpt-ui-Footer_StyledLogo_s1117u18', footer);
     if (!inheritedLogo) return;
     const image = document.createElement('img');
     image.className = 'offline-tenant-footer-brand';
@@ -315,7 +315,7 @@
   };
 
   const setupAddressPicker = () => {
-    const input = $('input[placeholder*="delivery" i]');
+    const input = $('input[placeholder*="rental" i]');
     if (!input || $('#offline-city-picker')) return;
     const root = input.closest('.wpt-ui-RoundedInput_Root_r1k29v13') || input.parentElement;
     if (!root) return;
@@ -481,7 +481,7 @@
   };
 
   const setupCityExplorer = () => {
-    $('.wpt-ui-WoltCities_Root_rxu9885')?.remove();
+    $('.wpt-ui-CasaPayCities_Root_rxu9885')?.remove();
   };
 
   const setupDiscoveryCategoryStrip = () => {
@@ -1250,11 +1250,11 @@
       const heading = $$('h2', main).find(node => node.textContent.replace(/\s+/g, ' ').trim() === label);
       return heading?.closest('.s3d7ju0') || heading?.closest('section');
     };
-    const fastest = sectionForHeading('Fastest delivery');
+    const fastest = sectionForHeading('Fastest rental');
     const getToKnow = sectionForHeading('Get to know us!');
     if (!fastest || !getToKnow) return;
 
-    const oldPromoLinks = $$('a', main).filter(link => /€0 delivery for 14 days|Back to your routine/.test(link.textContent));
+    const oldPromoLinks = $$('a', main).filter(link => /€0 rental for 14 days|Back to your routine/.test(link.textContent));
     const oldPromoContainers = [...new Set(oldPromoLinks.map(link => link.closest('.s3d7ju0') || link.parentElement).filter(Boolean))];
     oldPromoContainers.forEach(container => container.remove());
 
@@ -1837,7 +1837,7 @@
       $('.offline-modal__close', panel)?.focus();
     };
 
-    localStorage.removeItem('wolt-offline-theme');
+    localStorage.removeItem('casapay-offline-theme');
     document.documentElement.setAttribute('data-al-theme', 'light');
     document.documentElement.setAttribute('data-cb-theme', 'light');
 
@@ -1888,9 +1888,9 @@
       } else if (/cookies/i.test(label)) {
         button.setAttribute('aria-haspopup', 'dialog');
         button.setAttribute('aria-controls', panel.id);
-        button.setAttribute('aria-label', 'Offline cookie information');
+        button.setAttribute('aria-label', 'Cookie information');
         button.addEventListener('click', () => openPanel(button, 'Cookies', `
-          <div class="offline-footer-status"><strong>No tracking</strong><span>Offline demo</span></div>
+          <div class="offline-footer-status"><strong>No tracking</strong><span>Local preferences</span></div>
           <p>This static demo makes no analytics or advertising requests and does not store a theme preference.</p>`));
       }
     });
@@ -1930,7 +1930,7 @@
       if (!(link.getAttribute('aria-label') || link.textContent || '').trim()) link.setAttribute('aria-label', 'Open CasaPay content');
       if (link.getAttribute('href') === '#offline-external' && !link.getAttribute('aria-label')) {
         const label = link.textContent.trim() || 'External content';
-        link.setAttribute('aria-label', `${label} (unavailable offline)`);
+        link.setAttribute('aria-label', `${label} (coming soon)`);
       }
     });
     $$('[aria-hidden="true"]').forEach(node => {
@@ -1966,7 +1966,7 @@
   };
 
   const setupOperatorSurfaces = () => {
-    $$('a[data-offline-external*="merchant.wolt.com"], a[href*="merchant.wolt.com"]')
+    $$('a[data-offline-external*="partners.casapay.com"], a[href*="partners.casapay.com"]')
       .forEach(link => {
         const card = link.closest('.wpt-ui-PhotoCard_Root_rz6fyam');
         link.href = '/partner/operator';
@@ -1994,13 +1994,13 @@
   };
 
   const setupCasaPayPlusSurface = () => {
-    const heading = $$('h1,h2,h3,h4').find(node => node.textContent.replace(/\s+/g, ' ').trim() === '0 € delivery fees with CasaPay+');
+    const heading = $$('h1,h2,h3,h4').find(node => node.textContent.replace(/\s+/g, ' ').trim() === '0 € rental fees with CasaPay+');
     if (!heading) return;
     heading.textContent = '0 € no-deposit with CasaPay+';
     const card = heading.closest('.wpt-ui-PhotoCard_Root_rz6fyam') || heading.parentElement;
     const description = card && $('p', card);
     if (description) description.textContent = 'Choose a no-deposit option for eligible homes and keep more money available when you move.';
-    const legacyBadge = card && $('img[src*="Wolt__pill_logo"]', card);
+    const legacyBadge = card && $('img[src*="CasaPay__pill_logo"]', card);
     if (legacyBadge) {
       const badge = document.createElement('span');
       badge.className = 'offline-casapay-plus-badge';
@@ -2011,12 +2011,20 @@
     }
   };
 
-  const removeLegacyWoltCardBadges = () => {
-    $$('img[src*="WoltMarket.png"], img[src*="WoltForWork.png"]')
-      .forEach(image => {
-        const badge = image.closest('[class*="BottomCornerLabelElement"]');
-        badge?.remove();
-      });
+  const adaptHomepageCards = () => {
+    $$('img[src*="CasaPayMarket.png"], img[src*="CasaPayForWork.png"]')
+      .forEach(image => image.closest('[class*="BottomCornerLabelElement"]')?.remove());
+
+    $$('h1,h2,h3,h4').forEach(heading => {
+      const text = heading.textContent.replace(/\s+/g, ' ').trim();
+      if (text === 'Delivering happiness to your workplace') heading.textContent = 'Rent support that stays connected';
+    });
+
+    $$('a').forEach(link => {
+      const text = link.textContent.replace(/\s+/g, ' ').trim();
+      if (text === 'Check out CasaPay Market') link.textContent = 'Explore tenant rent payments';
+      if (text === 'Check out CasaPay for Work') link.textContent = 'Explore CasaPay tenant support';
+    });
   };
 
   const setup = () => {
@@ -2035,7 +2043,7 @@
     setupPlatformPartnerSurfaces();
     setupOperatorSurfaces();
     setupCasaPayPlusSurface();
-    removeLegacyWoltCardBadges();
+    adaptHomepageCards();
     improveAccessibility();
     requestAnimationFrame(() => requestAnimationFrame(() => {
       $('#offline-boot-shell')?.remove();

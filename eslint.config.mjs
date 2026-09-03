@@ -8,7 +8,7 @@ export default defineConfig([
   globalIgnores([
     ".next/**",
     "next-env.d.ts",
-    // These are verbatim assets from the prelive prototype, not project source.
+    // Bundled site assets are generated or third-party code, not project source.
     "public/assets/vendor/**",
     "public/_local_assets/**",
   ]),

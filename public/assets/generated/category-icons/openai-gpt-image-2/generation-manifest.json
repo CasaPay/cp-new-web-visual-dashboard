@@ -7,12 +7,12 @@
   "quality": "high",
   "aspect_ratio": "square",
   "reference_images": [
-    "_local_assets/imageproxy.wolt.com/7cb8d1ec9c99faf507-pasta-dish-light.png",
-    "_local_assets/imageproxy.wolt.com/d625813802fe28762b-fruits-and-vegetables-light.png",
-    "_local_assets/imageproxy.wolt.com/a4b242f98f83150cd7-grocery-basket-wolt-light.png",
-    "_local_assets/imageproxy.wolt.com/a079ee6ae1db4c0794-health-and-wellbeing-light.png",
-    "_local_assets/imageproxy.wolt.com/a206a73f9b2667310a-lotion-light.png",
-    "_local_assets/imageproxy.wolt.com/9c3572a1995b5b49b2-pet-bowl-light.png"
+    "_local_assets/media.casapay.local/7cb8d1ec9c99faf507-pasta-dish-light.png",
+    "_local_assets/media.casapay.local/d625813802fe28762b-fruits-and-vegetables-light.png",
+    "_local_assets/media.casapay.local/a4b242f98f83150cd7-grocery-basket-casapay-light.png",
+    "_local_assets/media.casapay.local/a079ee6ae1db4c0794-health-and-wellbeing-light.png",
+    "_local_assets/media.casapay.local/a206a73f9b2667310a-lotion-light.png",
+    "_local_assets/media.casapay.local/9c3572a1995b5b49b2-pet-bowl-light.png"
   ],
   "style_prompt": "Use all supplied images only as a strict visual-style reference set. Create\none new standalone category illustration belonging to exactly the same family.\nOutput a square PNG with a genuinely transparent background: no rounded square\ntile, no room, no scene, no horizon, and no full-canvas color field. Render a\nfriendly premium soft-3D object with rounded clay/plastic materials, smooth\nbeveled edges, restrained detail, and clean silhouette readability at 80 px.\nUse a slightly elevated three-quarter camera view, an upper-left soft key light,\nsubtle lower-right contact shadow and a faint category-colored ground glow.\nCenter the complete subject at 65-72% of canvas width/height, leaving 14-18%\nsafe area on every edge. Nothing may touch or leave the canvas. Match the\nreference set's saturated-but-soft cyan, blue, coral, orange, yellow and violet\naccents. No words, letters, numbers, logo, watermark, brand mark, UI, border,\noutline drawing, photorealism, people, hands, or duplicate stray objects.",
   "categories": {
@@ -99,7 +99,7 @@
     "cars": {
       "success": true,
       "elapsed_seconds": 33.26,
-      "prompt": "Create the Cars category icon: one cute unbranded compact city hatchback in a\nfront-left three-quarter view, predominantly Wolt-like turquoise blue with a\nsoft coral accent and neutral dark tires. Keep windows simple, omit license\nplate text, and make the car read instantly at thumbnail size. Exactly one car.",
+      "prompt": "Create the Cars category icon: one cute unbranded compact city hatchback in a\nfront-left three-quarter view, predominantly CasaPay-like turquoise blue with a\nsoft coral accent and neutral dark tires. Keep windows simple, omit license\nplate text, and make the car read instantly at thumbnail size. Exactly one car.",
       "original": "assets/generated/category-icons/openai-gpt-image-2/originals/cars-gpt-image-2-high.png",
       "source_dimensions": [
         1254,

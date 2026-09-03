@@ -18,14 +18,14 @@
 
   const setupOperatorNavigation = () => {
     const routeLabels = {
-      '/partner/en/est/product/wolt-app': 'Operator Portal',
-      '/partner/en/est/wolt-drive': 'RentLink',
+      '/partner/en/est/product/casapay-app': 'Operator Portal',
+      '/partner/en/est/rentlink': 'RentLink',
       '/partner/en/est/product/storefront': 'Tenant Payment Pages',
       '/partner/en/est/solution/integrations': 'Integrations',
       '/partner/en/est/solution/analytics': 'Analytics & Insights',
-      '/partner/en/est/wolt-ads': 'CasaPay for Operators',
+      '/partner/en/est/operator-tools': 'CasaPay for Operators',
       '/partner/en/est/solution/promotions': 'Tenant Communications',
-      '/partner/en/est/solution/wolt-plus': 'CasaPay+',
+      '/partner/en/est/solution/casapay-plus': 'CasaPay+',
       '/partner/en/est/solution/capital': 'Payments & Reconciliation',
       '/partner/en/est/business/restaurants': 'Letting Agents',
       '/partner/en/est/business/retailers': 'Property Managers',
@@ -172,7 +172,7 @@
       try {
         if (video.paused) { await video.play(); button.setAttribute('aria-label', 'Pause video'); }
         else { video.pause(); button.setAttribute('aria-label', 'Play video'); }
-      } catch (_) {
+      } catch {
         video.controls = true;
       }
     });
@@ -232,6 +232,11 @@
       if (!node.getAttribute('aria-label')) node.setAttribute('aria-label', 'Scrollable content');
     });
   };
+
+  // Shared branding, footer, and menu behavior is initialized by offline-consumer.js.
+  void setupBrand;
+  void setupFooter;
+  void setupMenu;
 
   const setup = () => { setupOperatorNavigation(); improveAccessibility(); setupFaqs(); setupVideo(); setupPlatformEarnings(); };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setup, { once:true });
