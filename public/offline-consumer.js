@@ -339,7 +339,7 @@
     status.className = 'offline-location-search-status';
     root.insertAdjacentElement('afterend', status);
 
-    const worker = new Worker('/location-search-worker.js?v=1');
+    const worker = new Worker('/location-search-worker.js?v=2');
     let ready = false;
     let userActivated = false;
     let requestId = 0;

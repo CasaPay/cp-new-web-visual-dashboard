@@ -1,6 +1,5 @@
 let catalogue = null;
 let records = [];
-const ACTIVE_CITY_ROUTES = new Set(['/en/est/tallinn', '/en/gbr/london']);
 
 const normalize = value => String(value || '')
   .normalize('NFKD')
@@ -60,8 +59,9 @@ const publicItem = item => {
   return result;
 };
 
-const popular = type => records
-  .filter(item => item.type === type)
+const popular = type => (catalogue.popular[type === 'city' ? 'cities' : 'universities'] || [])
+  .map(id => records.find(item => item.id === id))
+  .filter(Boolean)
   .map(publicItem);
 
 const search = (query, type) => records
@@ -79,9 +79,7 @@ const initialize = async () => {
   const response = await fetch('/data/location-search.json', { credentials: 'same-origin' });
   if (!response.ok) throw new Error(`Location catalogue failed with ${response.status}`);
   catalogue = await response.json();
-  records = catalogue.locations
-    .filter(item => ACTIVE_CITY_ROUTES.has(item.route))
-    .map(searchable);
+  records = catalogue.locations.map(searchable);
   postMessage({ type: 'ready', version: catalogue.version, result: { city: popular('city'), university: popular('university') } });
 };
 
