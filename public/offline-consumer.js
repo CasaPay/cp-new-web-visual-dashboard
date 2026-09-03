@@ -128,6 +128,13 @@
     menu.querySelectorAll(`a[href="${window.location.pathname}"]`).forEach(link => link.setAttribute('aria-current', 'page'));
 
     const modeSwitch = $('#offline-mode-switch');
+    const partnerModeMenu = modeSwitch && $('#offline-mode-partner-menu', modeSwitch);
+    if (partnerModeMenu) {
+      partnerModeMenu.innerHTML = `
+        <a role="menuitem" href="/partner/operator">For Operators</a>
+        <a role="menuitem" href="/partner/platforms">For Platforms</a>
+        <a role="menuitem" aria-disabled="true" tabindex="-1"><span>For Marketplaces</span><small>Coming soon</small></a>`;
+    }
     header.append(globalBrand);
     if (modeSwitch) header.append(modeSwitch);
     header.append(authActions, button, menu);
