@@ -4,14 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { operatorLinks, partnerLinks, tenantLinks } from "@/lib/site";
 
-const companyLinks = [["About us", "/help#about"], ["What we stand for", "/help#standards"], ["Contact", "/help#contact"]] as const;
-
 export function SiteFooter() {
   const groups = [
     ["For tenants", tenantLinks],
     ["For operators", operatorLinks],
     ["Partner with CasaPay", partnerLinks],
-    ["Company", companyLinks],
   ] as const;
 
   return (
@@ -36,8 +33,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} CasaPay</span>
-        <span>Private product demonstration</span>
-        <Link href="/help#privacy">Privacy &amp; terms</Link>
+        <span>Renting, made clearer.</span>
       </div>
     </footer>
   );

@@ -8,6 +8,7 @@
   ]);
   const OPERATOR_PRODUCT_LINKS = Object.freeze([
     Object.freeze(['CasaPay RentLink', '/rentlink']),
+    Object.freeze(['CasaPay Offers', '/partner/offers']),
     Object.freeze(['CasaPay+', '/partner/en/est/solution/casapay-plus']),
     Object.freeze(['CasaPay Capital', '/partner/capital']),
     Object.freeze(['CasaPay Referrals', '/partner/referrals']),
@@ -26,7 +27,7 @@
   });
   const VALID_LOCAL_PATHS = new Set([
     '/', '/en/est/tallinn', '/en/gbr/london', '/offers', '/tenant-protection', '/rentlink',
-    '/partner', '/partner/operator', '/partner/platforms', '/partner/marketplaces', '/partner/capital', '/partner/referrals',
+    '/partner', '/partner/operator', '/partner/offers', '/partner/platforms', '/partner/marketplaces', '/partner/capital', '/partner/referrals',
     '/partner/en/est', '/partner/en/est/product/casapay-app', '/partner/en/est/rentlink', '/partner/en/est/product/storefront',
     '/partner/en/est/solution/integrations', '/partner/en/est/solution/analytics', '/partner/en/est/operator-tools',
     '/partner/en/est/solution/promotions', '/partner/en/est/solution/casapay-plus', '/partner/en/est/solution/capital',

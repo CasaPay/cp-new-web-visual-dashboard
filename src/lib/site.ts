@@ -66,6 +66,7 @@ export const tenantLinks = [
 
 export const operatorLinks = [
   ["CasaPay RentLink", "/rentlink"],
+  ["CasaPay Offers", "/partner/offers"],
   ["CasaPay+", "/partner/en/est/solution/casapay-plus"],
   ["CasaPay Capital", "/partner/capital"],
   ["CasaPay Referrals", "/partner/referrals"],

@@ -11,6 +11,7 @@ The repository contains the approved CasaPay pages, interactions, global header 
 - Unsupported legacy city URLs redirect to the homepage
 - Tenant Offers and Tenant Protection pages
 - Partner Operator, Platforms, Marketplaces, Capital, Referrals, and RentLink pages
+- CasaPay Offers operator acquisition landing page
 - All 20 `/partner/en/est` partner navigation destinations
 - Only links with live local destinations are rendered
 

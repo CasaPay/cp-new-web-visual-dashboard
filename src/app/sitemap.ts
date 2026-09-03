@@ -8,6 +8,7 @@ const routes = [
   "/en/gbr/london",
   "/rentlink",
   "/partner/operator",
+  "/partner/offers",
   "/partner/platforms",
   "/partner/marketplaces",
   "/partner/capital",

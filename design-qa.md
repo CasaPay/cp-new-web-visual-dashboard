@@ -7,6 +7,7 @@
 - Unsupported-city redirects
 - Tenant product pages
 - Partner landing page, operator, platform, RentLink, and partner product pages
+- CasaPay Offers operator acquisition landing page
 - Desktop and mobile navigation
 
 ## Verified behavior
@@ -26,7 +27,7 @@
 - TypeScript and ESLint checks pass.
 - The brand-cleanliness check scans both paths and text content.
 - All scoped routes return successful responses.
-- All 31 published pages render without placeholder links, broken internal links, broken images, or browser console errors.
+- All published pages render without placeholder links, broken internal links, broken images, or browser console errors.
 - The rendered link crawl followed 29 unique internal destinations successfully.
 - Public crawling is enabled through `robots.txt`, with the CasaPay sitemap and host configured.
 - Baseline security headers and production output tracing are configured in Next.js.
