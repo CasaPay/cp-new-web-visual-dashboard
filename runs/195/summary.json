@@ -1,0 +1,21 @@
+{
+  "result": "review",
+  "update": false,
+  "checkpointsOk": true,
+  "total": 90,
+  "counts": {
+    "all": 45,
+    "review": 1,
+    "new": 0,
+    "changed": 1,
+    "failed": 0
+  },
+  "changed": [
+    "desktop__home.png"
+  ],
+  "newOnes": [],
+  "failed": [],
+  "error": null,
+  "generatedAt": "2026-10-18T20:13:55.106Z",
+  "commit": "42f0c2cadba6c2e7f117a26dc1067f6dc505247f"
+}
