@@ -1,0 +1,19 @@
+{
+  "result": "success",
+  "update": false,
+  "checkpointsOk": true,
+  "total": 90,
+  "counts": {
+    "all": 45,
+    "review": 0,
+    "new": 0,
+    "changed": 0,
+    "failed": 0
+  },
+  "changed": [],
+  "newOnes": [],
+  "failed": [],
+  "error": null,
+  "generatedAt": "2026-10-20T07:51:09.435Z",
+  "commit": "8570d6d6cabe6ee04781906a7c0f685af0513f50"
+}
