@@ -1,0 +1,26 @@
+{
+  "result": "review",
+  "update": false,
+  "checkpointsOk": true,
+  "total": 90,
+  "counts": {
+    "all": 45,
+    "review": 6,
+    "new": 0,
+    "changed": 6,
+    "failed": 0
+  },
+  "changed": [
+    "mobile__operator__guarantor.png",
+    "mobile__operator__no-deposit.png",
+    "mobile__operator__payouts.png",
+    "mobile__operator__reconciliation.png",
+    "mobile__operator__rent-collection.png",
+    "mobile__operator__tenant-verification.png"
+  ],
+  "newOnes": [],
+  "failed": [],
+  "error": null,
+  "generatedAt": "2026-10-21T22:28:40.229Z",
+  "commit": "57ca85c517d4cf0c9f844ea4848f8095da96ed16"
+}
