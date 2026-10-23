@@ -1,0 +1,21 @@
+{
+  "result": "review",
+  "update": false,
+  "checkpointsOk": true,
+  "total": 228,
+  "counts": {
+    "all": 114,
+    "review": 1,
+    "new": 0,
+    "changed": 1,
+    "failed": 0
+  },
+  "changed": [
+    "mobile__operator__rent-link.png"
+  ],
+  "newOnes": [],
+  "failed": [],
+  "error": null,
+  "generatedAt": "2026-10-23T15:15:17.121Z",
+  "commit": "7aaebd23760b0b4d24de9c6531eb3ccfb070b20c"
+}
