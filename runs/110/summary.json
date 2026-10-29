@@ -1,0 +1,24 @@
+{
+  "result": "review",
+  "update": false,
+  "checkpointsOk": true,
+  "total": 232,
+  "counts": {
+    "all": 116,
+    "review": 2,
+    "new": 2,
+    "changed": 0,
+    "failed": 0
+  },
+  "changed": [],
+  "newOnes": [
+    "desktop__casapay-one.png",
+    "desktop__casapay-one__partners.png",
+    "mobile__casapay-one.png",
+    "mobile__casapay-one__partners.png"
+  ],
+  "failed": [],
+  "error": null,
+  "generatedAt": "2026-10-29T16:07:54.420Z",
+  "commit": "6e44da62b0e34cc1ffe88373925321a3a0068090"
+}
