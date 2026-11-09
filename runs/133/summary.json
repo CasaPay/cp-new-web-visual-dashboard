@@ -1,0 +1,19 @@
+{
+  "result": "failure",
+  "update": false,
+  "checkpointsOk": false,
+  "total": 0,
+  "counts": {
+    "all": 118,
+    "review": 0,
+    "new": 0,
+    "changed": 0,
+    "failed": 0
+  },
+  "changed": [],
+  "newOnes": [],
+  "failed": [],
+  "error": "checkpoints failed — no screenshots produced",
+  "generatedAt": "2026-11-09T14:08:41.371Z",
+  "commit": "eb36cad8ad14cc8095186d2fe4d30d2fd1c1d855"
+}
